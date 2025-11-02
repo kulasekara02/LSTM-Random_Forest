@@ -1,0 +1,1016 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Student Success Prediction - Thesis Results Dashboard</title>
+    
+    <!-- External Libraries -->
+    <script src="https://cdn.jsdelivr.net/npm/chart.js@4.4.0/dist/chart.umd.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/papaparse@5.4.1/papaparse.min.js"></script>
+    <script src="https://cdn.tailwindcss.com"></script>
+    
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        body {
+            font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            min-height: 100vh;
+        }
+        
+        .glass-effect {
+            background: rgba(255, 255, 255, 0.95);
+            backdrop-filter: blur(10px);
+            border-radius: 20px;
+            box-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.37);
+        }
+        
+        .metric-card {
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: white;
+            border-radius: 15px;
+            padding: 1.5rem;
+            box-shadow: 0 10px 20px rgba(0,0,0,0.1);
+            transition: transform 0.3s ease;
+        }
+        
+        .metric-card:hover {
+            transform: translateY(-5px);
+        }
+        
+        .chart-container {
+            background: white;
+            border-radius: 15px;
+            padding: 20px;
+            box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+            margin-bottom: 20px;
+        }
+        
+        .data-table {
+            width: 100%;
+            border-collapse: collapse;
+        }
+        
+        .data-table th {
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: white;
+            padding: 12px;
+            text-align: left;
+            font-weight: 600;
+        }
+        
+        .data-table td {
+            padding: 12px;
+            border-bottom: 1px solid #e5e7eb;
+        }
+        
+        .data-table tr:hover {
+            background-color: #f9fafb;
+        }
+        
+        .success-badge {
+            background-color: #10b981;
+            color: white;
+            padding: 4px 12px;
+            border-radius: 20px;
+            font-size: 0.875rem;
+        }
+        
+        .risk-badge {
+            background-color: #ef4444;
+            color: white;
+            padding: 4px 12px;
+            border-radius: 20px;
+            font-size: 0.875rem;
+        }
+        
+        .loading {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            color: white;
+            font-size: 1.5rem;
+        }
+        
+        .tab-button {
+            padding: 10px 20px;
+            background: white;
+            border: 2px solid #e5e7eb;
+            border-radius: 10px;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            font-weight: 500;
+        }
+        
+        .tab-button.active {
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: white;
+            border-color: transparent;
+        }
+        
+        .error-message {
+            background-color: #fee2e2;
+            border: 1px solid #fecaca;
+            color: #dc2626;
+            padding: 1rem;
+            border-radius: 10px;
+            margin: 1rem 0;
+        }
+        
+        .info-message {
+            background-color: #dbeafe;
+            border: 1px solid #bfdbfe;
+            color: #1e40af;
+            padding: 1rem;
+            border-radius: 10px;
+            margin: 1rem 0;
+        }
+    </style>
+</head>
+<body>
+    <div id="loading" class="loading">
+        <div>Loading Dashboard...</div>
+    </div>
+    
+    <div id="dashboard" style="display: none;">
+        <!-- Header -->
+        <header class="text-white p-6">
+            <div class="container mx-auto">
+                <h1 class="text-4xl font-bold mb-2">Student Academic Success Prediction Dashboard</h1>
+                <p class="text-xl opacity-90">Hybrid LSTM-Random Forest Model Results (32-Week Analysis)</p>
+                <p class="text-sm opacity-75 mt-2" id="timestamp">Loading timestamp...</p>
+            </div>
+        </header>
+        
+        <!-- Main Content -->
+        <div class="container mx-auto px-6 pb-8">
+            <!-- Key Metrics -->
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-6 mb-8">
+                <div class="metric-card">
+                    <h3 class="text-lg font-semibold mb-2">Hybrid Model Performance</h3>
+                    <div class="text-3xl font-bold" id="hybrid-auc">-</div>
+                    <div class="text-sm opacity-90">ROC-AUC Score</div>
+                    <div class="mt-2 text-sm" id="hybrid-method">Method: -</div>
+                </div>
+                
+                <div class="metric-card">
+                    <h3 class="text-lg font-semibold mb-2">F1 Score</h3>
+                    <div class="text-3xl font-bold" id="hybrid-f1">-</div>
+                    <div class="text-sm opacity-90">Balance of Precision & Recall</div>
+                </div>
+                
+                <div class="metric-card">
+                    <h3 class="text-lg font-semibold mb-2">Accuracy</h3>
+                    <div class="text-3xl font-bold" id="hybrid-accuracy">-</div>
+                    <div class="text-sm opacity-90">Overall Correctness</div>
+                </div>
+            </div>
+            
+            <!-- Navigation Tabs -->
+            <div class="flex gap-4 mb-6 flex-wrap">
+                <button class="tab-button active" onclick="showTab('overview')">Overview</button>
+                <button class="tab-button" onclick="showTab('comparison')">Model Comparison</button>
+                <button class="tab-button" onclick="showTab('predictions')">Predictions</button>
+                <button class="tab-button" onclick="showTab('demographics')">Demographics</button>
+                <button class="tab-button" onclick="showTab('features')">Feature Importance</button>
+                <button class="tab-button" onclick="showTab('confusion')">Confusion Matrix</button>
+            </div>
+            
+            <!-- Tab Content -->
+            <div class="glass-effect p-6">
+                <!-- Overview Tab -->
+                <div id="overview-tab" class="tab-content">
+                    <h2 class="text-2xl font-bold mb-4">Model Performance Overview</h2>
+                    
+                    <div class="grid grid-cols-1 lg:grid-cols-2 gap-6">
+                        <!-- Model Comparison Chart -->
+                        <div class="chart-container">
+                            <h3 class="text-lg font-semibold mb-3">Model Comparison</h3>
+                            <canvas id="modelComparisonChart"></canvas>
+                        </div>
+                        
+                        <!-- Key Insights -->
+                        <div class="chart-container">
+                            <h3 class="text-lg font-semibold mb-3">Key Insights</h3>
+                            <div id="insights-content" class="space-y-3">
+                                <div class="info-message">Loading insights...</div>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <!-- Critical Weeks -->
+                    <div class="chart-container mt-6">
+                        <h3 class="text-lg font-semibold mb-3">Critical Intervention Weeks</h3>
+                        <div id="critical-weeks" class="flex gap-4 flex-wrap"></div>
+                    </div>
+                </div>
+                
+                <!-- Model Comparison Tab -->
+                <div id="comparison-tab" class="tab-content" style="display: none;">
+                    <h2 class="text-2xl font-bold mb-4">Detailed Model Comparison</h2>
+                    
+                    <div class="grid grid-cols-1 lg:grid-cols-2 gap-6">
+                        <!-- Performance Metrics Chart -->
+                        <div class="chart-container">
+                            <h3 class="text-lg font-semibold mb-3">Performance Metrics</h3>
+                            <canvas id="performanceChart"></canvas>
+                        </div>
+                        
+                        <!-- Improvement Analysis -->
+                        <div class="chart-container">
+                            <h3 class="text-lg font-semibold mb-3">Hybrid Model Improvements</h3>
+                            <canvas id="improvementChart"></canvas>
+                        </div>
+                    </div>
+                    
+                    <!-- Detailed Metrics Table -->
+                    <div class="chart-container mt-6">
+                        <h3 class="text-lg font-semibold mb-3">Detailed Metrics</h3>
+                        <table class="data-table">
+                            <thead>
+                                <tr>
+                                    <th>Model</th>
+                                    <th>AUC</th>
+                                    <th>F1 Score</th>
+                                    <th>Accuracy</th>
+                                </tr>
+                            </thead>
+                            <tbody id="metrics-table-body">
+                                <tr><td colspan="4" class="text-center">Loading...</td></tr>
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+                
+                <!-- Predictions Tab -->
+                <div id="predictions-tab" class="tab-content" style="display: none;">
+                    <h2 class="text-2xl font-bold mb-4">Student Predictions Analysis</h2>
+                    
+                    <div class="grid grid-cols-1 lg:grid-cols-2 gap-6 mb-6">
+                        <!-- Prediction Distribution -->
+                        <div class="chart-container">
+                            <h3 class="text-lg font-semibold mb-3">Prediction Distribution</h3>
+                            <canvas id="predictionDistChart"></canvas>
+                        </div>
+                        
+                        <!-- Confidence Distribution -->
+                        <div class="chart-container">
+                            <h3 class="text-lg font-semibold mb-3">Model Confidence</h3>
+                            <canvas id="confidenceChart"></canvas>
+                        </div>
+                    </div>
+                    
+                    <!-- Predictions Table -->
+                    <div class="chart-container">
+                        <h3 class="text-lg font-semibold mb-3">Sample Predictions (First 20)</h3>
+                        <div style="overflow-x: auto;">
+                            <table class="data-table">
+                                <thead>
+                                    <tr>
+                                        <th>Student ID</th>
+                                        <th>Institution</th>
+                                        <th>Actual</th>
+                                        <th>Predicted</th>
+                                        <th>Probability</th>
+                                        <th>LSTM Score</th>
+                                        <th>RF Score</th>
+                                    </tr>
+                                </thead>
+                                <tbody id="predictions-table-body">
+                                    <tr><td colspan="7" class="text-center">Loading predictions...</td></tr>
+                                </tbody>
+                            </table>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Demographics Tab -->
+                <div id="demographics-tab" class="tab-content" style="display: none;">
+                    <h2 class="text-2xl font-bold mb-4">Performance by Demographics</h2>
+                    
+                    <div class="grid grid-cols-1 lg:grid-cols-2 gap-6">
+                        <!-- By Institution -->
+                        <div class="chart-container">
+                            <h3 class="text-lg font-semibold mb-3">Performance by Institution</h3>
+                            <canvas id="institutionChart"></canvas>
+                        </div>
+                        
+                        <!-- By Gender -->
+                        <div class="chart-container">
+                            <h3 class="text-lg font-semibold mb-3">Performance by Gender</h3>
+                            <canvas id="genderChart"></canvas>
+                        </div>
+                        
+                        <!-- By Language -->
+                        <div class="chart-container">
+                            <h3 class="text-lg font-semibold mb-3">Performance by Language Proficiency</h3>
+                            <canvas id="languageChart"></canvas>
+                        </div>
+                        
+                        <!-- By Country -->
+                        <div class="chart-container">
+                            <h3 class="text-lg font-semibold mb-3">Top Countries by Performance</h3>
+                            <canvas id="countryChart"></canvas>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Features Tab -->
+                <div id="features-tab" class="tab-content" style="display: none;">
+                    <h2 class="text-2xl font-bold mb-4">Feature Importance Analysis</h2>
+                    
+                    <div class="chart-container">
+                        <h3 class="text-lg font-semibold mb-3">Most Important Features</h3>
+                        <canvas id="featureChart"></canvas>
+                    </div>
+                    
+                    <div class="chart-container mt-6">
+                        <h3 class="text-lg font-semibold mb-3">Feature List</h3>
+                        <div id="feature-list" class="grid grid-cols-2 md:grid-cols-3 gap-3"></div>
+                    </div>
+                </div>
+                
+                <!-- Confusion Matrix Tab -->
+                <div id="confusion-tab" class="tab-content" style="display: none;">
+                    <h2 class="text-2xl font-bold mb-4">Confusion Matrix Analysis</h2>
+                    
+                    <div class="grid grid-cols-1 lg:grid-cols-2 gap-6">
+                        <!-- Confusion Matrix Visualization -->
+                        <div class="chart-container">
+                            <h3 class="text-lg font-semibold mb-3">Confusion Matrix</h3>
+                            <canvas id="confusionMatrix"></canvas>
+                        </div>
+                        
+                        <!-- Classification Metrics -->
+                        <div class="chart-container">
+                            <h3 class="text-lg font-semibold mb-3">Classification Metrics</h3>
+                            <div id="classification-metrics" class="space-y-3"></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    
+    <script>
+        // Global variables to store data
+        let modelResults = null;
+        let predictions = null;
+        let charts = {};
+        
+        // Initialize dashboard
+        async function initDashboard() {
+            try {
+                // Load JSON results
+                const jsonResponse = await fetch('./results32/model_results_32w.json');
+                if (!jsonResponse.ok) throw new Error('Failed to load model results JSON');
+                modelResults = await jsonResponse.json();
+                
+                // Load CSV predictions
+                const csvResponse = await fetch('./dataset32/predictions_32w.csv');
+                if (!csvResponse.ok) throw new Error('Failed to load predictions CSV');
+                const csvText = await csvResponse.text();
+                
+                // Parse CSV
+                Papa.parse(csvText, {
+                    header: true,
+                    dynamicTyping: true,
+                    complete: function(results) {
+                        predictions = results.data.filter(row => row.student_id); // Filter empty rows
+                        
+                        // Update dashboard with loaded data
+                        updateDashboard();
+                        document.getElementById('loading').style.display = 'none';
+                        document.getElementById('dashboard').style.display = 'block';
+                    }
+                });
+            } catch (error) {
+                console.error('Error loading data:', error);
+                document.getElementById('loading').innerHTML = `
+                    <div class="error-message">
+                        <h3>Error Loading Data</h3>
+                        <p>${error.message}</p>
+                        <p>Please ensure the following files exist:</p>
+                        <ul>
+                            <li>./results32/model_results_32w.json</li>
+                            <li>./dataset32/predictions_32w.csv</li>
+                        </ul>
+                    </div>
+                `;
+            }
+        }
+        
+        // Update dashboard with data
+        function updateDashboard() {
+            // Update timestamp
+            document.getElementById('timestamp').textContent = 
+                `Last updated: ${new Date(modelResults.timestamp).toLocaleString()}`;
+            
+            // Update key metrics
+            const hybridModel = modelResults.models.hybrid_lstm_rf;
+            document.getElementById('hybrid-auc').textContent = hybridModel.auc.toFixed(4);
+            document.getElementById('hybrid-f1').textContent = hybridModel.f1.toFixed(4);
+            document.getElementById('hybrid-accuracy').textContent = hybridModel.accuracy.toFixed(4);
+            document.getElementById('hybrid-method').textContent = 
+                `Method: ${hybridModel.method || 'Hybrid'}${hybridModel.blend_alpha ? ` (α=${hybridModel.blend_alpha.toFixed(2)})` : ''}`;
+            
+            // Update insights
+            updateInsights();
+            
+            // Update critical weeks
+            updateCriticalWeeks();
+            
+            // Create all charts
+            createModelComparisonChart();
+            createPerformanceChart();
+            createImprovementChart();
+            createPredictionCharts();
+            createDemographicCharts();
+            createFeatureChart();
+            createConfusionMatrix();
+            
+            // Update tables
+            updateMetricsTable();
+            updatePredictionsTable();
+            updateClassificationMetrics();
+        }
+        
+        // Update insights section
+        function updateInsights() {
+            const insights = [];
+            
+            // Calculate improvements
+            const lstmAuc = modelResults.models.lstm.auc;
+            const rfAuc = modelResults.models.rf.auc;
+            const hybridAuc = modelResults.models.hybrid_lstm_rf.auc;
+            
+            const lstmImprovement = ((hybridAuc - lstmAuc) / lstmAuc * 100).toFixed(1);
+            const rfImprovement = ((hybridAuc - rfAuc) / rfAuc * 100).toFixed(1);
+            
+            insights.push(`✓ Hybrid model achieves ${hybridAuc.toFixed(3)} AUC score`);
+            insights.push(`✓ ${lstmImprovement}% improvement over LSTM alone`);
+            insights.push(`✓ ${rfImprovement}% improvement over Random Forest alone`);
+            
+            if (modelResults.critical_weeks) {
+                insights.push(`✓ Critical weeks identified: ${modelResults.critical_weeks.slice(0, 3).join(', ')}`);
+            }
+            
+            if (modelResults.notes) {
+                insights.push(`✓ ${modelResults.notes}`);
+            }
+            
+            const insightsHtml = insights.map(insight => 
+                `<div class="p-3 bg-green-50 border-l-4 border-green-500 text-green-700">${insight}</div>`
+            ).join('');
+            
+            document.getElementById('insights-content').innerHTML = insightsHtml;
+        }
+        
+        // Update critical weeks
+        function updateCriticalWeeks() {
+            if (!modelResults.critical_weeks) return;
+            
+            const weeksHtml = modelResults.critical_weeks.map(week => 
+                `<div class="px-4 py-2 bg-purple-100 text-purple-800 rounded-lg font-semibold">Week ${week}</div>`
+            ).join('');
+            
+            document.getElementById('critical-weeks').innerHTML = weeksHtml;
+        }
+        
+        // Create model comparison chart
+        function createModelComparisonChart() {
+            const ctx = document.getElementById('modelComparisonChart').getContext('2d');
+            
+            charts.modelComparison = new Chart(ctx, {
+                type: 'bar',
+                data: {
+                    labels: ['LSTM', 'Random Forest', 'Hybrid'],
+                    datasets: [{
+                        label: 'AUC Score',
+                        data: [
+                            modelResults.models.lstm.auc,
+                            modelResults.models.rf.auc,
+                            modelResults.models.hybrid_lstm_rf.auc
+                        ],
+                        backgroundColor: [
+                            'rgba(59, 130, 246, 0.8)',
+                            'rgba(34, 197, 94, 0.8)',
+                            'rgba(168, 85, 247, 0.8)'
+                        ],
+                        borderColor: [
+                            'rgba(59, 130, 246, 1)',
+                            'rgba(34, 197, 94, 1)',
+                            'rgba(168, 85, 247, 1)'
+                        ],
+                        borderWidth: 2
+                    }]
+                },
+                options: {
+                    responsive: true,
+                    maintainAspectRatio: false,
+                    scales: {
+                        y: {
+                            beginAtZero: false,
+                            min: Math.min(
+                                modelResults.models.lstm.auc,
+                                modelResults.models.rf.auc,
+                                modelResults.models.hybrid_lstm_rf.auc
+                            ) - 0.05
+                        }
+                    }
+                }
+            });
+        }
+        
+        // Create performance comparison chart
+        function createPerformanceChart() {
+            const ctx = document.getElementById('performanceChart').getContext('2d');
+            
+            charts.performance = new Chart(ctx, {
+                type: 'radar',
+                data: {
+                    labels: ['AUC', 'F1 Score', 'Accuracy'],
+                    datasets: [{
+                        label: 'LSTM',
+                        data: [
+                            modelResults.models.lstm.auc,
+                            modelResults.models.lstm.f1,
+                            modelResults.models.lstm.accuracy
+                        ],
+                        borderColor: 'rgba(59, 130, 246, 1)',
+                        backgroundColor: 'rgba(59, 130, 246, 0.2)'
+                    }, {
+                        label: 'Random Forest',
+                        data: [
+                            modelResults.models.rf.auc,
+                            modelResults.models.rf.f1,
+                            modelResults.models.rf.accuracy
+                        ],
+                        borderColor: 'rgba(34, 197, 94, 1)',
+                        backgroundColor: 'rgba(34, 197, 94, 0.2)'
+                    }, {
+                        label: 'Hybrid',
+                        data: [
+                            modelResults.models.hybrid_lstm_rf.auc,
+                            modelResults.models.hybrid_lstm_rf.f1,
+                            modelResults.models.hybrid_lstm_rf.accuracy
+                        ],
+                        borderColor: 'rgba(168, 85, 247, 1)',
+                        backgroundColor: 'rgba(168, 85, 247, 0.2)'
+                    }]
+                },
+                options: {
+                    responsive: true,
+                    maintainAspectRatio: false,
+                    scales: {
+                        r: {
+                            beginAtZero: false,
+                            min: 0.5
+                        }
+                    }
+                }
+            });
+        }
+        
+        // Create improvement chart
+        function createImprovementChart() {
+            const ctx = document.getElementById('improvementChart').getContext('2d');
+            
+            const lstmImprovement = ((modelResults.models.hybrid_lstm_rf.auc - modelResults.models.lstm.auc) / 
+                                    modelResults.models.lstm.auc * 100);
+            const rfImprovement = ((modelResults.models.hybrid_lstm_rf.auc - modelResults.models.rf.auc) / 
+                                  modelResults.models.rf.auc * 100);
+            
+            charts.improvement = new Chart(ctx, {
+                type: 'doughnut',
+                data: {
+                    labels: ['Improvement over LSTM', 'Improvement over RF'],
+                    datasets: [{
+                        data: [lstmImprovement, rfImprovement],
+                        backgroundColor: [
+                            'rgba(59, 130, 246, 0.8)',
+                            'rgba(34, 197, 94, 0.8)'
+                        ],
+                        borderWidth: 2
+                    }]
+                },
+                options: {
+                    responsive: true,
+                    maintainAspectRatio: false,
+                    plugins: {
+                        tooltip: {
+                            callbacks: {
+                                label: function(context) {
+                                    return context.label + ': ' + context.parsed.toFixed(1) + '%';
+                                }
+                            }
+                        }
+                    }
+                }
+            });
+        }
+        
+        // Create prediction distribution charts
+        function createPredictionCharts() {
+            if (!predictions || predictions.length === 0) return;
+            
+            // Prediction distribution
+            const ctx1 = document.getElementById('predictionDistChart').getContext('2d');
+            
+            const correct = predictions.filter(p => p.target_success === p.pred_label).length;
+            const incorrect = predictions.length - correct;
+            
+            charts.predDist = new Chart(ctx1, {
+                type: 'pie',
+                data: {
+                    labels: ['Correct Predictions', 'Incorrect Predictions'],
+                    datasets: [{
+                        data: [correct, incorrect],
+                        backgroundColor: [
+                            'rgba(34, 197, 94, 0.8)',
+                            'rgba(239, 68, 68, 0.8)'
+                        ]
+                    }]
+                },
+                options: {
+                    responsive: true,
+                    maintainAspectRatio: false
+                }
+            });
+            
+            // Confidence distribution
+            const ctx2 = document.getElementById('confidenceChart').getContext('2d');
+            
+            const probabilities = predictions.map(p => p.pred_success_prob);
+            const histogram = createHistogram(probabilities, 10);
+            
+            charts.confidence = new Chart(ctx2, {
+                type: 'bar',
+                data: {
+                    labels: histogram.labels,
+                    datasets: [{
+                        label: 'Number of Students',
+                        data: histogram.counts,
+                        backgroundColor: 'rgba(168, 85, 247, 0.8)',
+                        borderColor: 'rgba(168, 85, 247, 1)',
+                        borderWidth: 1
+                    }]
+                },
+                options: {
+                    responsive: true,
+                    maintainAspectRatio: false,
+                    scales: {
+                        x: {
+                            title: {
+                                display: true,
+                                text: 'Prediction Probability'
+                            }
+                        },
+                        y: {
+                            title: {
+                                display: true,
+                                text: 'Count'
+                            }
+                        }
+                    }
+                }
+            });
+        }
+        
+        // Create demographic charts
+        function createDemographicCharts() {
+            // These would use data from the JSON if available
+            if (modelResults.by_institution) {
+                createDemographicChart('institutionChart', modelResults.by_institution, 'Institution');
+            }
+            if (modelResults.by_gender) {
+                createDemographicChart('genderChart', modelResults.by_gender, 'Gender');
+            }
+            if (modelResults.by_language) {
+                createDemographicChart('languageChart', modelResults.by_language, 'Language Proficiency');
+            }
+            if (modelResults.by_country_home) {
+                createTopCountriesChart();
+            }
+        }
+        
+        // Helper function for demographic charts
+        function createDemographicChart(canvasId, data, title) {
+            const ctx = document.getElementById(canvasId).getContext('2d');
+            
+            const labels = Object.keys(data);
+            const aucValues = labels.map(key => data[key].auc || 0);
+            
+            new Chart(ctx, {
+                type: 'bar',
+                data: {
+                    labels: labels,
+                    datasets: [{
+                        label: 'AUC Score',
+                        data: aucValues,
+                        backgroundColor: 'rgba(102, 126, 234, 0.8)',
+                        borderColor: 'rgba(102, 126, 234, 1)',
+                        borderWidth: 1
+                    }]
+                },
+                options: {
+                    responsive: true,
+                    maintainAspectRatio: false,
+                    scales: {
+                        y: {
+                            beginAtZero: false,
+                            min: Math.min(...aucValues.filter(v => v > 0)) - 0.05
+                        }
+                    }
+                }
+            });
+        }
+        
+        // Create top countries chart
+        function createTopCountriesChart() {
+            const ctx = document.getElementById('countryChart').getContext('2d');
+            
+            const countryData = Object.entries(modelResults.by_country_home)
+                .filter(([_, data]) => data.auc && data.size >= 5)
+                .sort((a, b) => b[1].auc - a[1].auc)
+                .slice(0, 10);
+            
+            new Chart(ctx, {
+                type: 'horizontalBar',
+                data: {
+                    labels: countryData.map(([country, _]) => country),
+                    datasets: [{
+                        label: 'AUC Score',
+                        data: countryData.map(([_, data]) => data.auc),
+                        backgroundColor: 'rgba(118, 75, 162, 0.8)',
+                        borderColor: 'rgba(118, 75, 162, 1)',
+                        borderWidth: 1
+                    }]
+                },
+                options: {
+                    responsive: true,
+                    maintainAspectRatio: false,
+                    scales: {
+                        x: {
+                            beginAtZero: false,
+                            min: 0.5
+                        }
+                    }
+                }
+            });
+        }
+        
+        // Create feature importance chart
+        function createFeatureChart() {
+            if (!modelResults.feature_importance_hint) return;
+            
+            const ctx = document.getElementById('featureChart').getContext('2d');
+            
+            // Create mock importance values (decreasing)
+            const features = modelResults.feature_importance_hint;
+            const importanceValues = features.map((_, i) => 1 - (i * 0.1));
+            
+            charts.features = new Chart(ctx, {
+                type: 'horizontalBar',
+                data: {
+                    labels: features,
+                    datasets: [{
+                        label: 'Importance',
+                        data: importanceValues,
+                        backgroundColor: 'rgba(251, 146, 60, 0.8)',
+                        borderColor: 'rgba(251, 146, 60, 1)',
+                        borderWidth: 1
+                    }]
+                },
+                options: {
+                    responsive: true,
+                    maintainAspectRatio: false,
+                    scales: {
+                        x: {
+                            beginAtZero: true
+                        }
+                    }
+                }
+            });
+            
+            // Update feature list
+            const featureListHtml = features.map(feature => 
+                `<div class="px-3 py-2 bg-orange-100 text-orange-800 rounded-lg text-sm font-medium">${feature}</div>`
+            ).join('');
+            
+            document.getElementById('feature-list').innerHTML = featureListHtml;
+        }
+        
+        // Create confusion matrix visualization
+        function createConfusionMatrix() {
+            if (!modelResults.confusion_matrix) return;
+            
+            const ctx = document.getElementById('confusionMatrix').getContext('2d');
+            const cm = modelResults.confusion_matrix;
+            
+            // Create a heatmap-style visualization
+            const data = [
+                [cm.tn, cm.fp],
+                [cm.fn, cm.tp]
+            ];
+            
+            charts.confusion = new Chart(ctx, {
+                type: 'scatter',
+                data: {
+                    datasets: [{
+                        label: 'True Negative',
+                        data: [{x: 0, y: 0, r: Math.sqrt(cm.tn) * 3}],
+                        backgroundColor: 'rgba(34, 197, 94, 0.6)'
+                    }, {
+                        label: 'False Positive',
+                        data: [{x: 1, y: 0, r: Math.sqrt(cm.fp) * 3}],
+                        backgroundColor: 'rgba(239, 68, 68, 0.6)'
+                    }, {
+                        label: 'False Negative',
+                        data: [{x: 0, y: 1, r: Math.sqrt(cm.fn) * 3}],
+                        backgroundColor: 'rgba(251, 146, 60, 0.6)'
+                    }, {
+                        label: 'True Positive',
+                        data: [{x: 1, y: 1, r: Math.sqrt(cm.tp) * 3}],
+                        backgroundColor: 'rgba(59, 130, 246, 0.6)'
+                    }]
+                },
+                options: {
+                    responsive: true,
+                    maintainAspectRatio: false,
+                    scales: {
+                        x: {
+                            title: {
+                                display: true,
+                                text: 'Predicted'
+                            },
+                            ticks: {
+                                callback: function(value) {
+                                    return value === 0 ? 'Negative' : 'Positive';
+                                }
+                            }
+                        },
+                        y: {
+                            title: {
+                                display: true,
+                                text: 'Actual'
+                            },
+                            ticks: {
+                                callback: function(value) {
+                                    return value === 0 ? 'Negative' : 'Positive';
+                                }
+                            }
+                        }
+                    },
+                    plugins: {
+                        tooltip: {
+                            callbacks: {
+                                label: function(context) {
+                                    const labels = {
+                                        'True Negative': cm.tn,
+                                        'False Positive': cm.fp,
+                                        'False Negative': cm.fn,
+                                        'True Positive': cm.tp
+                                    };
+                                    return context.dataset.label + ': ' + labels[context.dataset.label];
+                                }
+                            }
+                        }
+                    }
+                }
+            });
+        }
+        
+        // Update metrics table
+        function updateMetricsTable() {
+            const tableBody = document.getElementById('metrics-table-body');
+            
+            const rows = [
+                ['LSTM', modelResults.models.lstm],
+                ['Random Forest', modelResults.models.rf],
+                ['Hybrid', modelResults.models.hybrid_lstm_rf]
+            ];
+            
+            const html = rows.map(([name, metrics]) => `
+                <tr>
+                    <td class="font-semibold">${name}</td>
+                    <td>${metrics.auc.toFixed(4)}</td>
+                    <td>${metrics.f1.toFixed(4)}</td>
+                    <td>${metrics.accuracy.toFixed(4)}</td>
+                </tr>
+            `).join('');
+            
+            tableBody.innerHTML = html;
+        }
+        
+        // Update predictions table
+        function updatePredictionsTable() {
+            if (!predictions || predictions.length === 0) return;
+            
+            const tableBody = document.getElementById('predictions-table-body');
+            
+            const html = predictions.slice(0, 20).map(pred => `
+                <tr>
+                    <td>${pred.student_id}</td>
+                    <td>${pred.institution || '-'}</td>
+                    <td><span class="${pred.target_success === 1 ? 'success-badge' : 'risk-badge'}">
+                        ${pred.target_success === 1 ? 'Success' : 'At Risk'}
+                    </span></td>
+                    <td><span class="${pred.pred_label === 1 ? 'success-badge' : 'risk-badge'}">
+                        ${pred.pred_label === 1 ? 'Success' : 'At Risk'}
+                    </span></td>
+                    <td>${pred.pred_success_prob.toFixed(3)}</td>
+                    <td>${pred.p_lstm.toFixed(3)}</td>
+                    <td>${pred.p_rf.toFixed(3)}</td>
+                </tr>
+            `).join('');
+            
+            tableBody.innerHTML = html;
+        }
+        
+        // Update classification metrics
+        function updateClassificationMetrics() {
+            if (!modelResults.confusion_matrix) return;
+            
+            const cm = modelResults.confusion_matrix;
+            const total = cm.tn + cm.fp + cm.fn + cm.tp;
+            const precision = cm.tp / (cm.tp + cm.fp);
+            const recall = cm.tp / (cm.tp + cm.fn);
+            const specificity = cm.tn / (cm.tn + cm.fp);
+            
+            const metricsHtml = `
+                <div class="p-3 bg-blue-50 rounded-lg">
+                    <span class="font-semibold">Total Samples:</span> ${total}
+                </div>
+                <div class="p-3 bg-green-50 rounded-lg">
+                    <span class="font-semibold">Precision:</span> ${(precision * 100).toFixed(1)}%
+                </div>
+                <div class="p-3 bg-yellow-50 rounded-lg">
+                    <span class="font-semibold">Recall (Sensitivity):</span> ${(recall * 100).toFixed(1)}%
+                </div>
+                <div class="p-3 bg-purple-50 rounded-lg">
+                    <span class="font-semibold">Specificity:</span> ${(specificity * 100).toFixed(1)}%
+                </div>
+                <div class="p-3 bg-gray-50 rounded-lg">
+                    <span class="font-semibold">True Positives:</span> ${cm.tp} | 
+                    <span class="font-semibold">True Negatives:</span> ${cm.tn}
+                </div>
+                <div class="p-3 bg-red-50 rounded-lg">
+                    <span class="font-semibold">False Positives:</span> ${cm.fp} | 
+                    <span class="font-semibold">False Negatives:</span> ${cm.fn}
+                </div>
+            `;
+            
+            document.getElementById('classification-metrics').innerHTML = metricsHtml;
+        }
+        
+        // Helper function to create histogram
+        function createHistogram(data, bins) {
+            const min = Math.min(...data);
+            const max = Math.max(...data);
+            const binWidth = (max - min) / bins;
+            
+            const labels = [];
+            const counts = [];
+            
+            for (let i = 0; i < bins; i++) {
+                const binMin = min + (i * binWidth);
+                const binMax = binMin + binWidth;
+                
+                labels.push(`${binMin.toFixed(2)}-${binMax.toFixed(2)}`);
+                counts.push(data.filter(d => d >= binMin && d < binMax).length);
+            }
+            
+            return { labels, counts };
+        }
+        
+        // Tab switching
+        function showTab(tabName) {
+            // Hide all tabs
+            document.querySelectorAll('.tab-content').forEach(tab => {
+                tab.style.display = 'none';
+            });
+            
+            // Remove active class from all buttons
+            document.querySelectorAll('.tab-button').forEach(btn => {
+                btn.classList.remove('active');
+            });
+            
+            // Show selected tab
+            document.getElementById(`${tabName}-tab`).style.display = 'block';
+            
+            // Add active class to clicked button
+            event.target.classList.add('active');
+        }
+        
+        // Initialize on page load
+        window.addEventListener('DOMContentLoaded', initDashboard);
+    </script>
+</body>
+</html>

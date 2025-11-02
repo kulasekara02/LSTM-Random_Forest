@@ -1,0 +1,166 @@
+student_id,institution,country_home,country_host,language_proficiency,gender,subject_field,target_success,pred_label,pred_success_prob,p_lstm,p_rf,p_hybrid
+LA000553,TSI Riga,Sri Lanka,Latvia,B1,Female,Computer Science,0,1,0.5777606,0.59767544,0.43340497102805636,0.5777606
+LA000170,Daugavpils University,Nigeria,Latvia,A2,Male,Computer Science,0,1,0.6153499,0.5993029,0.46135602351748434,0.6153499
+LA000376,TSI Riga,Nigeria,Latvia,B1,Male,Engineering,1,1,0.75238776,0.5989866,0.663568788617986,0.75238776
+IT000343,University of Messina,Nigeria,Italy,B1,Other,Engineering,0,1,0.6271384,0.5985037,0.48796621067279167,0.6271384
+LA000135,TSI Riga,USA,Latvia,C2,Other,Engineering,1,1,0.73694634,0.5975441,0.702094402292046,0.73694634
+SL000154,Comenius University Bratislava,Pakistan,Slovakia,C1,Prefer not to say,Logistics,1,1,0.74374425,0.5980532,0.6327036260947633,0.74374425
+SL000084,Slovak Tech,India,Slovakia,C1,Other,Engineering,0,1,0.7218828,0.60124195,0.5996013731175123,0.7218828
+SL000066,Slovak Tech,Vietnam,Slovakia,C1,Male,Computer Science,1,1,0.72142017,0.59803647,0.5980218844495532,0.72142017
+SL000002,Comenius University Bratislava,Sri Lanka,Slovakia,B2,Female,Logistics,1,1,0.68275857,0.598426,0.558563151463807,0.68275857
+IT000525,University of Messina,Latvia,Italy,B2,Male,Economics,0,1,0.76143026,0.59763515,0.7263983900523264,0.76143026
+IT000049,Politecnico di Torino,Brazil,Italy,B1,Other,Logistics,0,1,0.61774683,0.5990689,0.46261648112519593,0.61774683
+SL000322,Slovak Tech,Spain,Slovakia,A2,Prefer not to say,Data Science,0,1,0.72936094,0.59901947,0.6074336269599842,0.72936094
+LA000523,TSI Riga,Ukraine,Latvia,B2,Female,Data Science,1,1,0.54917586,0.59965765,0.38247320028469955,0.54917586
+LA000204,TSI Riga,USA,Latvia,A2,Female,Economics,0,1,0.6719847,0.5991162,0.5246310593998359,0.6719847
+IT000391,Politecnico di Torino,Slovakia,Italy,C1,Female,English Philology,1,1,0.6726011,0.59816533,0.5228078396932423,0.6726011
+LA000040,TSI Riga,Ukraine,Latvia,B2,Female,English Philology,1,1,0.71833146,0.5979557,0.6017103087507953,0.71833146
+SL000014,Comenius University Bratislava,Brazil,Slovakia,A2,Female,Business,0,1,0.50657666,0.59766555,0.32914471118305094,0.50657666
+SL000198,Slovak Tech,Ukraine,Slovakia,B1,Female,Computer Science,1,1,0.6166352,0.5976984,0.48639584269453484,0.6166352
+IT000055,Politecnico di Torino,Pakistan,Italy,A2,Other,Business,1,1,0.69815516,0.5967765,0.5529398009623216,0.69815516
+LA000002,TSI Riga,Vietnam,Latvia,C1,Prefer not to say,Psychology,0,1,0.622689,0.59795845,0.4869599627011783,0.622689
+LA000297,Daugavpils University,Ukraine,Latvia,C2,Male,Engineering,1,1,0.7204368,0.5987013,0.6088957707726633,0.7204368
+IT000272,University of Messina,Spain,Italy,A2,Female,Economics,1,1,0.7282989,0.59781873,0.6362329201742916,0.7282989
+SL000355,Comenius University Bratislava,Vietnam,Slovakia,C1,Prefer not to say,Engineering,1,1,0.7009325,0.6016649,0.5642393846943313,0.7009325
+IT000308,Politecnico di Torino,Nigeria,Italy,B2,Female,Computer Science,1,1,0.71959007,0.5994458,0.5998489213276262,0.71959007
+SL000384,Comenius University Bratislava,Latvia,Slovakia,C2,Female,Economics,0,1,0.72716784,0.5977267,0.6568361079416525,0.72716784
+SL000081,Slovak Tech,Brazil,Slovakia,C1,Other,Psychology,0,1,0.7329222,0.5983094,0.639070629564235,0.7329222
+IT000033,University of Messina,Bangladesh,Italy,B2,Other,Psychology,1,1,0.73518467,0.6008907,0.618631949265539,0.73518467
+LA000284,TSI Riga,USA,Latvia,A2,Female,Data Science,0,1,0.7634143,0.60229146,0.7026166223093313,0.7634143
+SL000447,Slovak Tech,Nigeria,Slovakia,B1,Prefer not to say,Engineering,1,1,0.53487825,0.5979793,0.3825673633869627,0.53487825
+IT000051,University of Messina,Ukraine,Italy,C2,Female,Data Science,0,1,0.67576027,0.5974637,0.5533303382438587,0.67576027
+LA000308,Daugavpils University,Spain,Latvia,B2,Other,Logistics,1,1,0.7592739,0.59797645,0.6962989197512074,0.7592739
+IT000155,Politecnico di Torino,Latvia,Italy,B1,Male,Engineering,0,1,0.6158846,0.5998683,0.46197700440633,0.6158846
+IT000270,Politecnico di Torino,Bangladesh,Italy,C2,Female,Psychology,0,1,0.6531328,0.5980946,0.5030771519841181,0.6531328
+IT000166,University of Messina,Italy,Italy,C2,Male,Engineering,1,1,0.7608262,0.5980892,0.6866708946835344,0.7608262
+LA000348,TSI Riga,Nigeria,Latvia,B1,Female,Economics,1,1,0.69450843,0.6018226,0.5636736555779862,0.69450843
+LA000247,Daugavpils University,Latvia,Latvia,B2,Other,Data Science,1,1,0.75161344,0.59766775,0.6673903913093256,0.75161344
+IT000194,University of Messina,India,Italy,A2,Prefer not to say,Engineering,1,1,0.74108,0.5973432,0.6631464946557333,0.74108
+LA000137,TSI Riga,Latvia,Latvia,C2,Prefer not to say,Computer Science,1,1,0.7415713,0.59830856,0.6394000196389283,0.7415713
+LA000387,Daugavpils University,Pakistan,Latvia,A2,Female,English Philology,1,1,0.6275239,0.5990883,0.47205573484539354,0.6275239
+IT000203,University of Messina,Bangladesh,Italy,C1,Other,Economics,1,1,0.7222425,0.60829777,0.6070371124358263,0.7222425
+IT000089,Politecnico di Torino,Spain,Italy,C1,Male,English Philology,0,1,0.7313627,0.60202056,0.6064091686504013,0.7313627
+LA000476,TSI Riga,Pakistan,Latvia,A2,Other,Economics,1,1,0.6251135,0.5975307,0.4848192139878025,0.6251135
+IT000493,University of Messina,Spain,Italy,B1,Female,Logistics,1,1,0.7101375,0.5972663,0.6116526656806622,0.7101375
+SL000457,Slovak Tech,Brazil,Slovakia,B1,Male,Logistics,0,1,0.50534254,0.597916,0.36020075437083626,0.50534254
+LA000001,Daugavpils University,USA,Latvia,B2,Male,Economics,1,1,0.7541402,0.5989328,0.6521302139896327,0.7541402
+IT000109,University of Messina,Sri Lanka,Italy,B1,Male,Business,1,1,0.70272815,0.59816957,0.5738142797425957,0.70272815
+SL000224,Comenius University Bratislava,Brazil,Slovakia,A2,Female,English Philology,0,0,0.4627052,0.59981585,0.2734219400692002,0.4627052
+SL000451,Slovak Tech,Latvia,Slovakia,A2,Female,Economics,0,1,0.64324814,0.5979054,0.5037832430144646,0.64324814
+IT000375,Politecnico di Torino,Pakistan,Italy,C2,Male,Data Science,1,1,0.7381845,0.5994495,0.6206534845736327,0.7381845
+LA000205,TSI Riga,Latvia,Latvia,B2,Female,Business,1,1,0.74709904,0.6012699,0.6443556335893317,0.74709904
+SL000482,Slovak Tech,Brazil,Slovakia,B2,Female,Engineering,1,1,0.7213381,0.5987159,0.6039647562167945,0.7213381
+LA000195,Daugavpils University,USA,Latvia,B2,Prefer not to say,English Philology,1,1,0.7209238,0.5983052,0.6392252096530848,0.7209238
+LA000256,Daugavpils University,Sri Lanka,Latvia,C2,Prefer not to say,Computer Science,1,1,0.783985,0.5996847,0.7739048847501047,0.783985
+LA000536,TSI Riga,Ukraine,Latvia,B1,Female,Business,0,1,0.56388986,0.60029584,0.40409483214499425,0.56388986
+LA000021,Daugavpils University,Vietnam,Latvia,B1,Male,English Philology,0,1,0.63239,0.5982461,0.5153666761263377,0.63239
+LA000575,Daugavpils University,Latvia,Latvia,B2,Female,English Philology,0,1,0.7438637,0.5981004,0.6634369606553079,0.7438637
+LA000361,TSI Riga,USA,Latvia,A2,Other,Data Science,1,1,0.74094164,0.5984529,0.6469115347068348,0.74094164
+SL000323,Slovak Tech,Sri Lanka,Slovakia,C1,Male,Computer Science,1,1,0.65461767,0.5973836,0.5099562863133378,0.65461767
+SL000050,Comenius University Bratislava,USA,Slovakia,C2,Female,Psychology,1,1,0.75616604,0.59798133,0.6640397242609961,0.75616604
+LA000224,TSI Riga,Bangladesh,Latvia,B1,Female,Economics,1,1,0.57770634,0.59786415,0.44078623334151207,0.57770634
+SL000119,Comenius University Bratislava,Italy,Slovakia,B1,Female,Business,0,1,0.55922294,0.5974949,0.3754411451584348,0.55922294
+SL000480,Comenius University Bratislava,Pakistan,Slovakia,C1,Male,Economics,1,1,0.64273316,0.59758544,0.514529410640175,0.64273316
+SL000468,Slovak Tech,Ukraine,Slovakia,C2,Other,Logistics,0,1,0.63148594,0.6010964,0.486338773886557,0.63148594
+LA000242,Daugavpils University,Nigeria,Latvia,A2,Female,Data Science,0,1,0.56589365,0.6064377,0.41549941442880167,0.56589365
+SL000419,Comenius University Bratislava,Latvia,Slovakia,C1,Female,Engineering,1,1,0.72434324,0.5983139,0.643234927767906,0.72434324
+LA000306,TSI Riga,Bangladesh,Latvia,C1,Prefer not to say,Data Science,1,1,0.6614909,0.6010978,0.5185419115447264,0.6614909
+LA000578,TSI Riga,Bangladesh,Latvia,B2,Other,Engineering,0,1,0.7688433,0.59955406,0.7151389827145455,0.7688433
+SL000319,Slovak Tech,USA,Slovakia,A2,Prefer not to say,Economics,1,1,0.6693765,0.5991066,0.5280449796576021,0.6693765
+SL000463,Slovak Tech,Italy,Slovakia,C1,Male,Engineering,0,1,0.6966138,0.5977329,0.5856358368541476,0.6966138
+IT000221,University of Messina,Italy,Italy,B2,Prefer not to say,Economics,0,1,0.7829798,0.59920233,0.7722303404684456,0.7829798
+IT000107,University of Messina,Ukraine,Italy,A2,Prefer not to say,Engineering,1,1,0.6791992,0.5987172,0.5323662420664352,0.6791992
+IT000063,Politecnico di Torino,Nigeria,Italy,C2,Male,Computer Science,1,1,0.735771,0.59760296,0.6415796078867093,0.735771
+IT000211,University of Messina,Bangladesh,Italy,A2,Prefer not to say,Computer Science,0,1,0.51740605,0.59857726,0.364320653928249,0.51740605
+LA000485,Daugavpils University,Ukraine,Latvia,A2,Prefer not to say,English Philology,1,0,0.48349193,0.5979644,0.33383889677560497,0.48349193
+IT000121,Politecnico di Torino,Vietnam,Italy,C1,Female,Psychology,0,1,0.7028936,0.59951925,0.5687373221597289,0.7028936
+LA000410,Daugavpils University,Vietnam,Latvia,C1,Prefer not to say,Logistics,1,1,0.73981434,0.5974765,0.7101376382821534,0.73981434
+IT000404,University of Messina,Spain,Italy,B1,Female,Logistics,1,1,0.6788844,0.5983809,0.5402807774562893,0.6788844
+IT000457,University of Messina,India,Italy,B2,Other,Computer Science,1,1,0.7460609,0.6015806,0.6377415680387185,0.7460609
+LA000053,TSI Riga,Slovakia,Latvia,C2,Female,English Philology,0,1,0.6288427,0.5980598,0.5195527043388036,0.6288427
+SL000366,Comenius University Bratislava,Ukraine,Slovakia,B2,Other,Economics,1,1,0.6624502,0.59717774,0.5434147715559435,0.6624502
+IT000269,Politecnico di Torino,Vietnam,Italy,A2,Female,Data Science,0,1,0.7171488,0.60623753,0.5938094972026762,0.7171488
+SL000145,Comenius University Bratislava,India,Slovakia,B2,Other,English Philology,1,1,0.7222177,0.59866714,0.6036034138635513,0.7222177
+SL000467,Comenius University Bratislava,Vietnam,Slovakia,A2,Male,Engineering,0,0,0.43610513,0.59742475,0.2853158775191256,0.43610513
+SL000038,Comenius University Bratislava,Sri Lanka,Slovakia,B2,Other,English Philology,1,1,0.76693976,0.598547,0.7180995046455905,0.76693976
+LA000100,TSI Riga,India,Latvia,B2,Prefer not to say,Engineering,1,1,0.74859416,0.5979706,0.669173892175496,0.74859416
+IT000297,University of Messina,Slovakia,Italy,B1,Other,Psychology,0,1,0.67713284,0.59740615,0.552431391373873,0.67713284
+IT000215,Politecnico di Torino,Italy,Italy,A2,Other,Economics,1,1,0.59835076,0.5975741,0.46127370406309753,0.59835076
+IT000303,Politecnico di Torino,Ukraine,Italy,A2,Female,Business,1,1,0.5892899,0.59661615,0.4592529062006981,0.5892899
+LA000052,Daugavpils University,Slovakia,Latvia,C2,Male,Economics,0,1,0.70900023,0.597153,0.6094447190235899,0.70900023
+IT000485,University of Messina,Ukraine,Italy,B1,Male,Business,0,1,0.6085739,0.5984696,0.45282826078260197,0.6085739
+IT000021,Politecnico di Torino,Brazil,Italy,B2,Other,Logistics,1,1,0.7308451,0.5981499,0.6241143979972085,0.7308451
+LA000512,Daugavpils University,India,Latvia,C1,Other,Engineering,1,1,0.7803958,0.59898734,0.7535150381820818,0.7803958
+IT000273,Politecnico di Torino,Ukraine,Italy,C1,Female,Data Science,1,1,0.66881096,0.59830296,0.5348475522370282,0.66881096
+IT000243,University of Messina,Sri Lanka,Italy,B2,Prefer not to say,Data Science,1,1,0.7617157,0.6028447,0.68215167830821,0.7617157
+LA000078,TSI Riga,Slovakia,Latvia,B1,Other,Engineering,1,1,0.73699284,0.5986053,0.6507412191074982,0.73699284
+LA000032,Daugavpils University,Brazil,Latvia,A2,Other,Psychology,0,1,0.64680743,0.5976018,0.5140931591349018,0.64680743
+IT000260,Politecnico di Torino,Spain,Italy,C1,Other,Economics,0,1,0.6493449,0.59771585,0.5119066031263589,0.6493449
+SL000137,Slovak Tech,Ukraine,Slovakia,C2,Female,Data Science,1,1,0.713876,0.5993185,0.5980292532464815,0.713876
+IT000130,Politecnico di Torino,Nigeria,Italy,C2,Male,Computer Science,1,1,0.7552377,0.59817874,0.7078928362120688,0.7552377
+LA000395,Daugavpils University,Bangladesh,Latvia,B1,Prefer not to say,Economics,0,1,0.59582746,0.59766835,0.45021222145719103,0.59582746
+IT000085,University of Messina,Slovakia,Italy,C1,Female,Computer Science,0,1,0.7017088,0.5974331,0.5666357410344477,0.7017088
+LA000569,TSI Riga,Vietnam,Latvia,A2,Male,Data Science,1,1,0.5972658,0.5991274,0.4552878328853807,0.5972658
+SL000160,Slovak Tech,Bangladesh,Slovakia,B2,Male,Psychology,0,1,0.63442165,0.6024233,0.4861925955643523,0.63442165
+IT000383,Politecnico di Torino,Pakistan,Italy,C1,Male,Logistics,1,1,0.7030016,0.59817696,0.5641218894753282,0.7030016
+IT000532,University of Messina,Brazil,Italy,A2,Male,Logistics,0,1,0.52571166,0.59954065,0.36359872743828225,0.52571166
+IT000535,Politecnico di Torino,Italy,Italy,B1,Other,Business,0,1,0.6249261,0.5975571,0.48810949267047476,0.6249261
+SL000356,Slovak Tech,Slovakia,Slovakia,B2,Male,Business,1,1,0.7170511,0.59838116,0.6018224078570207,0.7170511
+IT000196,University of Messina,Bangladesh,Italy,A2,Female,Logistics,1,1,0.707342,0.59680164,0.5986265549404106,0.707342
+IT000224,Politecnico di Torino,Nigeria,Italy,B2,Other,Psychology,1,1,0.71900463,0.5980724,0.6164970538984723,0.71900463
+LA000010,Daugavpils University,Spain,Latvia,C1,Prefer not to say,Economics,1,1,0.6256765,0.59751713,0.486320356414777,0.6256765
+SL000294,Slovak Tech,Sri Lanka,Slovakia,C2,Other,Engineering,1,1,0.70243484,0.60173494,0.5648321390971572,0.70243484
+SL000292,Slovak Tech,Bangladesh,Slovakia,C1,Male,Logistics,1,1,0.7559445,0.59854025,0.7397409483502402,0.7559445
+LA000060,TSI Riga,Nigeria,Latvia,C2,Other,Business,0,1,0.74884284,0.5971164,0.6830692848662097,0.74884284
+IT000047,Politecnico di Torino,Italy,Italy,C1,Prefer not to say,Engineering,1,1,0.7420225,0.5985067,0.6445370408727299,0.7420225
+SL000168,Comenius University Bratislava,Vietnam,Slovakia,C1,Male,Data Science,1,1,0.7427077,0.597739,0.6853105952394672,0.7427077
+IT000259,University of Messina,Italy,Italy,B1,Other,Data Science,1,1,0.60543466,0.5962683,0.4247903734037053,0.60543466
+SL000027,Comenius University Bratislava,Vietnam,Slovakia,B2,Prefer not to say,Business,1,1,0.6492702,0.5975634,0.5106943489271483,0.6492702
+IT000461,University of Messina,Sri Lanka,Italy,C2,Female,Economics,1,1,0.7777522,0.59822625,0.7423071086687596,0.7777522
+LA000585,Daugavpils University,India,Latvia,B1,Female,Business,0,1,0.65816146,0.60226953,0.5138440871799157,0.65816146
+IT000515,University of Messina,Vietnam,Italy,C2,Female,Psychology,1,1,0.66239727,0.5989877,0.5156693132263751,0.66239727
+SL000439,Slovak Tech,Nigeria,Slovakia,A2,Other,Computer Science,1,1,0.5427208,0.60237503,0.38985421936232845,0.5427208
+IT000327,Politecnico di Torino,India,Italy,C2,Female,Psychology,0,1,0.65593225,0.5982094,0.5204960570565619,0.65593225
+LA000352,Daugavpils University,Latvia,Latvia,C1,Prefer not to say,Computer Science,1,1,0.72375596,0.59778684,0.6396440361777325,0.72375596
+SL000238,Slovak Tech,Slovakia,Slovakia,C2,Prefer not to say,Business,0,1,0.7540663,0.5976066,0.6880446981031115,0.7540663
+SL000237,Slovak Tech,Slovakia,Slovakia,C2,Male,Engineering,1,1,0.6752405,0.59743655,0.5421568510695216,0.6752405
+LA000260,TSI Riga,Bangladesh,Latvia,C1,Other,Logistics,1,1,0.58531225,0.59778935,0.4281875448641789,0.58531225
+SL000221,Comenius University Bratislava,USA,Slovakia,B1,Prefer not to say,Economics,1,1,0.63200665,0.5983771,0.48177034830324683,0.63200665
+IT000206,Politecnico di Torino,India,Italy,C1,Male,Psychology,1,1,0.58410025,0.59705883,0.43928129990053727,0.58410025
+IT000232,Politecnico di Torino,Ukraine,Italy,B2,Male,Engineering,1,1,0.73030347,0.59811795,0.6463211901068999,0.73030347
+IT000355,University of Messina,Brazil,Italy,C1,Prefer not to say,Data Science,0,1,0.70705557,0.5979123,0.6091015747308929,0.70705557
+IT000201,Politecnico di Torino,Latvia,Italy,C2,Other,Economics,1,1,0.7707745,0.6012775,0.7223585198567183,0.7707745
+SL000300,Slovak Tech,Nigeria,Slovakia,C2,Other,Engineering,1,1,0.7594518,0.5990809,0.6942340780956534,0.7594518
+LA000033,TSI Riga,Sri Lanka,Latvia,B1,Male,Engineering,1,1,0.5707518,0.6013508,0.4151624344503402,0.5707518
+LA000221,Daugavpils University,Spain,Latvia,B1,Other,Economics,1,1,0.70487714,0.59817564,0.5782670171405834,0.70487714
+SL000470,Comenius University Bratislava,Brazil,Slovakia,B2,Female,English Philology,0,1,0.6833359,0.5975185,0.5859986743164295,0.6833359
+LA000147,Daugavpils University,Brazil,Latvia,B2,Male,Economics,1,1,0.7835572,0.59944534,0.7724168496789413,0.7835572
+LA000103,Daugavpils University,Sri Lanka,Latvia,C2,Female,Psychology,1,1,0.7447529,0.5982303,0.6706381512312624,0.7447529
+SL000036,Slovak Tech,Italy,Slovakia,C1,Male,Economics,0,1,0.6987879,0.60255045,0.5699271830354583,0.6987879
+LA000323,TSI Riga,Spain,Latvia,A2,Female,Computer Science,1,1,0.57292175,0.6071452,0.4293023845321669,0.57292175
+LA000467,TSI Riga,USA,Latvia,B2,Prefer not to say,Engineering,0,1,0.76976246,0.59784544,0.7147006819763317,0.76976246
+LA000045,Daugavpils University,Brazil,Latvia,B1,Female,Engineering,1,1,0.5698141,0.5983007,0.4279907860469855,0.5698141
+IT000440,University of Messina,Vietnam,Italy,B2,Female,Data Science,1,1,0.7510639,0.5975373,0.66364419837821,0.7510639
+LA000051,TSI Riga,Italy,Latvia,A2,Male,Engineering,1,1,0.6505303,0.6005627,0.5024223061736742,0.6505303
+IT000413,Politecnico di Torino,Pakistan,Italy,A2,Male,English Philology,0,0,0.45069727,0.59718096,0.30023975167956174,0.45069727
+LA000562,TSI Riga,Spain,Latvia,B1,Female,Computer Science,0,1,0.6171955,0.59779453,0.49010371939242653,0.6171955
+LA000524,TSI Riga,Latvia,Latvia,A2,Other,Engineering,0,1,0.59366286,0.59797394,0.4573946581815051,0.59366286
+SL000464,Comenius University Bratislava,Spain,Slovakia,C1,Prefer not to say,Computer Science,1,1,0.6781516,0.59899116,0.5449721717145797,0.6781516
+SL000189,Comenius University Bratislava,Nigeria,Slovakia,B2,Other,Psychology,1,1,0.7568444,0.60129726,0.6690198892493001,0.7568444
+SL000182,Comenius University Bratislava,Nigeria,Slovakia,C1,Prefer not to say,Business,1,1,0.75388044,0.59787107,0.6700751133002654,0.75388044
+LA000123,Daugavpils University,USA,Latvia,B2,Other,Economics,0,1,0.75840294,0.5970737,0.7590998460428733,0.75840294
+IT000116,Politecnico di Torino,Brazil,Italy,B2,Other,Economics,1,1,0.76852965,0.6007753,0.7148723733230076,0.76852965
+SL000115,Slovak Tech,Vietnam,Slovakia,C1,Other,Economics,0,1,0.68810433,0.5991348,0.5524224788994921,0.68810433
+SL000262,Slovak Tech,Slovakia,Slovakia,B1,Female,Engineering,1,1,0.5948278,0.5990921,0.43614372002145685,0.5948278
+LA000336,TSI Riga,Nigeria,Latvia,C1,Male,English Philology,1,1,0.7594631,0.5981208,0.7210851364688797,0.7594631
+IT000217,University of Messina,Brazil,Italy,B2,Female,Psychology,1,1,0.7437546,0.59834695,0.6642356955962914,0.7437546
+LA000068,Daugavpils University,Brazil,Latvia,C2,Male,Engineering,1,1,0.6924249,0.5971175,0.5783373697167267,0.6924249
+SL000496,Slovak Tech,Italy,Slovakia,B2,Female,Logistics,1,1,0.77005625,0.59816,0.7396294890536915,0.77005625
+SL000321,Comenius University Bratislava,Pakistan,Slovakia,A2,Other,Business,0,1,0.542664,0.5999557,0.3807247052305066,0.542664
+LA000444,Daugavpils University,Spain,Latvia,B1,Male,Computer Science,1,1,0.749141,0.5980011,0.6511162195360128,0.749141
+IT000222,Politecnico di Torino,Italy,Italy,B1,Prefer not to say,Psychology,0,1,0.51237434,0.598674,0.35068155294447656,0.51237434
+LA000186,Daugavpils University,Nigeria,Latvia,B1,Female,Logistics,0,1,0.53884417,0.59821653,0.3727662617078411,0.53884417
+SL000434,Comenius University Bratislava,Vietnam,Slovakia,B2,Male,Computer Science,0,1,0.7534364,0.5981127,0.6557431402439425,0.7534364
+SL000368,Comenius University Bratislava,Brazil,Slovakia,C1,Female,Data Science,1,1,0.72439593,0.5992568,0.6037699249343914,0.72439593
+SL000433,Comenius University Bratislava,Slovakia,Slovakia,B1,Female,Computer Science,0,1,0.5238615,0.5977131,0.37755746655719685,0.5238615
+LA000446,Daugavpils University,USA,Latvia,C2,Prefer not to say,Economics,1,1,0.7768674,0.59802616,0.7599437815497652,0.7768674

@@ -1,0 +1,166 @@
+student_id,institution,country_home,country_host,gender,age,language_proficiency,gpa_prev,attendance_rate,socio_econ_status,marital_status,teaching_style_difference,dropout,cultural_distance,support_program,target_success,completion_status,subject_field,timestamp_created
+LA000553,TSI Riga,Sri Lanka,Latvia,Female,26,B1,70.8,0.87,High,Other,0.19,0,0.6,None,0,Failed Exams,Computer Science,2025-11-02T11:58:25Z
+LA000170,Daugavpils University,Nigeria,Latvia,Male,21,A2,78.7,0.74,Medium,Married,0.36,1,0.7,BuddyProgram,0,Left Country,Computer Science,2025-11-02T11:58:25Z
+LA000376,TSI Riga,Nigeria,Latvia,Male,27,B1,63.8,1.0,Medium,Single,0.33,0,0.7,LanguageMentor,1,Completed,Engineering,2025-11-02T11:58:25Z
+IT000343,University of Messina,Nigeria,Italy,Other,25,B1,83.7,0.84,Low,Single,0.39,1,0.7,None,0,Administrative Withdrawal,Engineering,2025-11-02T11:58:25Z
+LA000135,TSI Riga,USA,Latvia,Other,25,C2,72.9,0.88,High,Married,0.08,0,0.3,LanguageMentor,1,Completed,Engineering,2025-11-02T11:58:25Z
+SL000154,Comenius University Bratislava,Pakistan,Slovakia,Prefer not to say,20,C1,61.6,0.91,Low,Other,0.24,0,0.6,LanguageMentor,1,Completed,Logistics,2025-11-02T11:58:26Z
+SL000084,Slovak Tech,India,Slovakia,Other,25,C1,70.2,0.88,Low,Single,0.3,1,0.6,Tutoring,0,Dropped Out,Engineering,2025-11-02T11:58:26Z
+SL000066,Slovak Tech,Vietnam,Slovakia,Male,28,C1,75.8,0.92,Low,Single,0.31,0,0.6,Tutoring,1,Completed,Computer Science,2025-11-02T11:58:26Z
+SL000002,Comenius University Bratislava,Sri Lanka,Slovakia,Female,23,B2,60.2,0.83,Medium,Other,0.14,0,0.6,None,1,Completed,Logistics,2025-11-02T11:58:25Z
+IT000525,University of Messina,Latvia,Italy,Male,28,B2,65.0,0.92,Medium,Other,0.4,1,0.1,Counseling,0,Left Country,Economics,2025-11-02T11:58:25Z
+IT000049,Politecnico di Torino,Brazil,Italy,Other,21,B1,73.6,0.83,Medium,Single,0.51,1,0.5,BuddyProgram,0,Left Country,Logistics,2025-11-02T11:58:25Z
+SL000322,Slovak Tech,Spain,Slovakia,Prefer not to say,28,A2,73.8,0.93,Medium,Married,0.05,1,0.1,BuddyProgram,0,Dropped Out,Data Science,2025-11-02T11:58:26Z
+LA000523,TSI Riga,Ukraine,Latvia,Female,25,B2,69.3,0.73,High,Other,0.4,0,0.1,None,1,Completed,Data Science,2025-11-02T11:58:25Z
+LA000204,TSI Riga,USA,Latvia,Female,22,A2,69.9,0.79,High,Other,0.14,1,0.3,BuddyProgram,0,Dropped Out,Economics,2025-11-02T11:58:25Z
+IT000391,Politecnico di Torino,Slovakia,Italy,Female,18,C1,69.1,0.92,Low,Single,0.31,0,0.1,BuddyProgram,1,Completed,English Philology,2025-11-02T11:58:25Z
+LA000040,TSI Riga,Ukraine,Latvia,Female,26,B2,75.1,0.89,High,Other,0.46,0,0.1,None,1,Completed,English Philology,2025-11-02T11:58:25Z
+SL000014,Comenius University Bratislava,Brazil,Slovakia,Female,24,A2,60.2,0.97,High,Married,0.33,0,0.5,LanguageMentor,0,Failed Exams,Business,2025-11-02T11:58:25Z
+SL000198,Slovak Tech,Ukraine,Slovakia,Female,22,B1,52.4,0.9,Low,Married,0.26,0,0.1,BuddyProgram,1,Completed,Computer Science,2025-11-02T11:58:26Z
+IT000055,Politecnico di Torino,Pakistan,Italy,Other,20,A2,79.0,0.96,Low,Married,0.23,0,0.6,Tutoring,1,Completed,Business,2025-11-02T11:58:25Z
+LA000002,TSI Riga,Vietnam,Latvia,Prefer not to say,24,C1,70.5,0.88,High,Married,0.46,0,0.6,Tutoring,0,Failed Exams,Psychology,2025-11-02T11:58:25Z
+LA000297,Daugavpils University,Ukraine,Latvia,Male,24,C2,68.2,0.91,Medium,Married,0.18,0,0.1,None,1,Completed,Engineering,2025-11-02T11:58:25Z
+IT000272,University of Messina,Spain,Italy,Female,26,A2,83.2,0.95,High,Other,0.38,0,0.1,None,1,Ongoing,Economics,2025-11-02T11:58:25Z
+SL000355,Comenius University Bratislava,Vietnam,Slovakia,Prefer not to say,24,C1,67.8,0.86,Medium,Other,0.54,0,0.6,None,1,Completed,Engineering,2025-11-02T11:58:26Z
+IT000308,Politecnico di Torino,Nigeria,Italy,Female,27,B2,69.1,0.81,High,Married,0.31,0,0.7,BuddyProgram,1,Completed,Computer Science,2025-11-02T11:58:25Z
+SL000384,Comenius University Bratislava,Latvia,Slovakia,Female,25,C2,73.8,0.95,Medium,Single,0.49,1,0.1,None,0,Dropped Out,Economics,2025-11-02T11:58:26Z
+SL000081,Slovak Tech,Brazil,Slovakia,Other,22,C1,62.2,0.91,Low,Single,0.16,0,0.5,BuddyProgram,0,Failed Exams,Psychology,2025-11-02T11:58:26Z
+IT000033,University of Messina,Bangladesh,Italy,Other,19,B2,69.0,0.95,Low,Married,0.32,0,0.6,Tutoring,1,Completed,Psychology,2025-11-02T11:58:25Z
+LA000284,TSI Riga,USA,Latvia,Female,23,A2,82.4,1.0,Medium,Married,0.16,1,0.3,None,0,Left Country,Data Science,2025-11-02T11:58:25Z
+SL000447,Slovak Tech,Nigeria,Slovakia,Prefer not to say,23,B1,58.8,0.86,Medium,Other,0.3,0,0.7,None,1,Completed,Engineering,2025-11-02T11:58:26Z
+IT000051,University of Messina,Ukraine,Italy,Female,20,C2,58.8,0.89,Low,Married,0.24,0,0.1,LanguageMentor,0,Failed Exams,Data Science,2025-11-02T11:58:25Z
+LA000308,Daugavpils University,Spain,Latvia,Other,24,B2,72.3,0.92,High,Other,0.2,0,0.1,Tutoring,1,Completed,Logistics,2025-11-02T11:58:25Z
+IT000155,Politecnico di Torino,Latvia,Italy,Male,22,B1,77.6,0.85,Medium,Married,0.5,1,0.1,Tutoring,0,Dropped Out,Engineering,2025-11-02T11:58:25Z
+IT000270,Politecnico di Torino,Bangladesh,Italy,Female,24,C2,78.9,0.82,Medium,Single,0.11,1,0.6,BuddyProgram,0,Dropped Out,Psychology,2025-11-02T11:58:25Z
+IT000166,University of Messina,Italy,Italy,Male,23,C2,55.7,0.92,High,Other,0.21,0,0.1,LanguageMentor,1,Completed,Engineering,2025-11-02T11:58:25Z
+LA000348,TSI Riga,Nigeria,Latvia,Female,20,B1,76.9,1.0,Medium,Married,0.16,0,0.7,None,1,Completed,Economics,2025-11-02T11:58:25Z
+LA000247,Daugavpils University,Latvia,Latvia,Other,25,B2,98.0,0.94,Low,Single,0.39,0,0.1,BuddyProgram,1,Completed,Data Science,2025-11-02T11:58:25Z
+IT000194,University of Messina,India,Italy,Prefer not to say,20,A2,82.6,0.94,Medium,Single,0.08,0,0.6,Tutoring,1,Completed,Engineering,2025-11-02T11:58:25Z
+LA000137,TSI Riga,Latvia,Latvia,Prefer not to say,18,C2,74.1,0.85,High,Single,0.07,0,0.1,BuddyProgram,1,Completed,Computer Science,2025-11-02T11:58:25Z
+LA000387,Daugavpils University,Pakistan,Latvia,Female,18,A2,76.3,0.91,High,Married,0.25,0,0.6,None,1,Completed,English Philology,2025-11-02T11:58:25Z
+IT000203,University of Messina,Bangladesh,Italy,Other,20,C1,65.3,0.96,High,Other,0.22,0,0.6,None,1,Completed,Economics,2025-11-02T11:58:25Z
+IT000089,Politecnico di Torino,Spain,Italy,Male,21,C1,80.1,0.75,Medium,Married,0.04,1,0.1,None,0,Dropped Out,English Philology,2025-11-02T11:58:25Z
+LA000476,TSI Riga,Pakistan,Latvia,Other,18,A2,71.7,0.95,Low,Single,0.1,0,0.6,LanguageMentor,1,Completed,Economics,2025-11-02T11:58:25Z
+IT000493,University of Messina,Spain,Italy,Female,26,B1,73.8,1.0,High,Single,0.16,0,0.1,LanguageMentor,1,Ongoing,Logistics,2025-11-02T11:58:25Z
+SL000457,Slovak Tech,Brazil,Slovakia,Male,23,B1,78.1,0.82,Medium,Married,0.47,1,0.5,None,0,Dropped Out,Logistics,2025-11-02T11:58:26Z
+LA000001,Daugavpils University,USA,Latvia,Male,24,B2,86.7,0.88,High,Married,0.18,0,0.3,Tutoring,1,Completed,Economics,2025-11-02T11:58:25Z
+IT000109,University of Messina,Sri Lanka,Italy,Male,25,B1,60.5,0.96,High,Single,0.06,0,0.6,LanguageMentor,1,Completed,Business,2025-11-02T11:58:25Z
+SL000224,Comenius University Bratislava,Brazil,Slovakia,Female,26,A2,71.1,0.84,Medium,Married,0.42,1,0.5,LanguageMentor,0,Left Country,English Philology,2025-11-02T11:58:26Z
+SL000451,Slovak Tech,Latvia,Slovakia,Female,23,A2,81.2,0.87,High,Single,0.07,0,0.1,None,0,Transferred,Economics,2025-11-02T11:58:26Z
+IT000375,Politecnico di Torino,Pakistan,Italy,Male,20,C2,71.7,0.79,Low,Other,0.33,0,0.6,Tutoring,1,Completed,Data Science,2025-11-02T11:58:25Z
+LA000205,TSI Riga,Latvia,Latvia,Female,19,B2,60.5,0.81,Low,Single,0.09,0,0.1,LanguageMentor,1,Completed,Business,2025-11-02T11:58:25Z
+SL000482,Slovak Tech,Brazil,Slovakia,Female,28,B2,69.6,0.9,High,Married,0.18,0,0.5,BuddyProgram,1,Ongoing,Engineering,2025-11-02T11:58:26Z
+LA000195,Daugavpils University,USA,Latvia,Prefer not to say,23,B2,85.8,0.84,Medium,Married,0.13,0,0.3,None,1,Completed,English Philology,2025-11-02T11:58:25Z
+LA000256,Daugavpils University,Sri Lanka,Latvia,Prefer not to say,23,C2,84.4,0.93,High,Other,0.24,0,0.6,LanguageMentor,1,Completed,Computer Science,2025-11-02T11:58:25Z
+LA000536,TSI Riga,Ukraine,Latvia,Female,25,B1,59.4,0.69,Medium,Married,0.3,1,0.1,Tutoring,0,Dropped Out,Business,2025-11-02T11:58:25Z
+LA000021,Daugavpils University,Vietnam,Latvia,Male,24,B1,85.4,0.88,Medium,Other,0.51,1,0.6,LanguageMentor,0,Dropped Out,English Philology,2025-11-02T11:58:25Z
+LA000575,Daugavpils University,Latvia,Latvia,Female,24,B2,65.4,0.92,Low,Other,0.49,1,0.1,LanguageMentor,0,Dropped Out,English Philology,2025-11-02T11:58:25Z
+LA000361,TSI Riga,USA,Latvia,Other,27,A2,66.7,0.98,Low,Married,0.04,0,0.3,BuddyProgram,1,Completed,Data Science,2025-11-02T11:58:25Z
+SL000323,Slovak Tech,Sri Lanka,Slovakia,Male,21,C1,72.3,0.87,Low,Single,0.14,0,0.6,None,1,Completed,Computer Science,2025-11-02T11:58:26Z
+SL000050,Comenius University Bratislava,USA,Slovakia,Female,24,C2,72.5,0.91,High,Other,0.35,0,0.3,LanguageMentor,1,Completed,Psychology,2025-11-02T11:58:25Z
+LA000224,TSI Riga,Bangladesh,Latvia,Female,24,B1,91.8,0.9,Medium,Single,0.26,0,0.6,None,1,Completed,Economics,2025-11-02T11:58:25Z
+SL000119,Comenius University Bratislava,Italy,Slovakia,Female,20,B1,62.9,0.87,Medium,Single,0.64,1,0.1,Tutoring,0,Administrative Withdrawal,Business,2025-11-02T11:58:26Z
+SL000480,Comenius University Bratislava,Pakistan,Slovakia,Male,24,C1,65.8,0.81,High,Single,0.28,0,0.6,LanguageMentor,1,Ongoing,Economics,2025-11-02T11:58:26Z
+SL000468,Slovak Tech,Ukraine,Slovakia,Other,25,C2,70.0,0.66,Medium,Single,0.23,1,0.1,LanguageMentor,0,Dropped Out,Logistics,2025-11-02T11:58:26Z
+LA000242,Daugavpils University,Nigeria,Latvia,Female,25,A2,70.4,0.86,Low,Married,0.47,1,0.7,LanguageMentor,0,Dropped Out,Data Science,2025-11-02T11:58:25Z
+SL000419,Comenius University Bratislava,Latvia,Slovakia,Female,21,C1,54.6,0.96,Low,Single,0.11,0,0.1,BuddyProgram,1,Completed,Engineering,2025-11-02T11:58:26Z
+LA000306,TSI Riga,Bangladesh,Latvia,Prefer not to say,21,C1,70.2,0.91,Medium,Other,0.42,0,0.6,None,1,Ongoing,Data Science,2025-11-02T11:58:25Z
+LA000578,TSI Riga,Bangladesh,Latvia,Other,27,B2,82.0,0.9,Medium,Other,0.22,1,0.6,None,0,Left Country,Engineering,2025-11-02T11:58:25Z
+SL000319,Slovak Tech,USA,Slovakia,Prefer not to say,24,A2,72.1,0.93,Medium,Married,0.06,0,0.3,LanguageMentor,1,Completed,Economics,2025-11-02T11:58:26Z
+SL000463,Slovak Tech,Italy,Slovakia,Male,22,C1,65.9,0.87,Medium,Single,0.34,1,0.1,Tutoring,0,Left Country,Engineering,2025-11-02T11:58:26Z
+IT000221,University of Messina,Italy,Italy,Prefer not to say,26,B2,67.8,1.0,High,Single,0.1,0,0.1,BuddyProgram,0,Failed Exams,Economics,2025-11-02T11:58:25Z
+IT000107,University of Messina,Ukraine,Italy,Prefer not to say,26,A2,63.5,0.98,Low,Single,0.25,0,0.1,None,1,Completed,Engineering,2025-11-02T11:58:25Z
+IT000063,Politecnico di Torino,Nigeria,Italy,Male,26,C2,68.7,0.94,Medium,Married,0.43,0,0.7,None,1,Completed,Computer Science,2025-11-02T11:58:25Z
+IT000211,University of Messina,Bangladesh,Italy,Prefer not to say,21,A2,61.4,0.87,High,Single,0.49,0,0.6,LanguageMentor,0,Failed Exams,Computer Science,2025-11-02T11:58:25Z
+LA000485,Daugavpils University,Ukraine,Latvia,Prefer not to say,26,A2,67.1,0.88,High,Other,0.27,0,0.1,None,1,Completed,English Philology,2025-11-02T11:58:25Z
+IT000121,Politecnico di Torino,Vietnam,Italy,Female,24,C1,60.3,0.91,High,Other,0.47,0,0.6,None,0,Failed Exams,Psychology,2025-11-02T11:58:25Z
+LA000410,Daugavpils University,Vietnam,Latvia,Prefer not to say,28,C1,84.5,0.9,High,Other,0.4,0,0.6,BuddyProgram,1,Ongoing,Logistics,2025-11-02T11:58:25Z
+IT000404,University of Messina,Spain,Italy,Female,20,B1,72.0,0.79,Low,Married,0.45,0,0.1,LanguageMentor,1,Ongoing,Logistics,2025-11-02T11:58:25Z
+IT000457,University of Messina,India,Italy,Other,23,B2,92.3,0.96,Medium,Other,0.29,0,0.6,BuddyProgram,1,Completed,Computer Science,2025-11-02T11:58:25Z
+LA000053,TSI Riga,Slovakia,Latvia,Female,24,C2,81.3,0.78,Medium,Single,0.45,0,0.1,BuddyProgram,0,Transferred,English Philology,2025-11-02T11:58:25Z
+SL000366,Comenius University Bratislava,Ukraine,Slovakia,Other,21,B2,79.7,0.79,Medium,Single,0.23,0,0.1,LanguageMentor,1,Completed,Economics,2025-11-02T11:58:26Z
+IT000269,Politecnico di Torino,Vietnam,Italy,Female,25,A2,80.6,0.91,Low,Married,0.3,1,0.6,Tutoring,0,Left Country,Data Science,2025-11-02T11:58:25Z
+SL000145,Comenius University Bratislava,India,Slovakia,Other,28,B2,73.5,0.72,High,Single,0.18,0,0.6,None,1,Completed,English Philology,2025-11-02T11:58:26Z
+SL000467,Comenius University Bratislava,Vietnam,Slovakia,Male,23,A2,72.8,0.82,Medium,Married,0.26,1,0.6,None,0,Dropped Out,Engineering,2025-11-02T11:58:26Z
+SL000038,Comenius University Bratislava,Sri Lanka,Slovakia,Other,26,B2,69.6,0.9,Low,Married,0.18,0,0.6,LanguageMentor,1,Completed,English Philology,2025-11-02T11:58:25Z
+LA000100,TSI Riga,India,Latvia,Prefer not to say,21,B2,84.4,0.89,High,Single,0.12,0,0.6,LanguageMentor,1,Completed,Engineering,2025-11-02T11:58:25Z
+IT000297,University of Messina,Slovakia,Italy,Other,19,B1,75.9,0.96,Low,Other,0.37,1,0.1,None,0,Dropped Out,Psychology,2025-11-02T11:58:25Z
+IT000215,Politecnico di Torino,Italy,Italy,Other,18,A2,72.0,0.87,High,Single,0.19,0,0.1,None,1,Completed,Economics,2025-11-02T11:58:25Z
+IT000303,Politecnico di Torino,Ukraine,Italy,Female,22,A2,56.4,0.92,High,Married,0.37,0,0.1,None,1,Completed,Business,2025-11-02T11:58:25Z
+LA000052,Daugavpils University,Slovakia,Latvia,Male,19,C2,73.7,0.87,High,Other,0.27,1,0.1,Tutoring,0,Dropped Out,Economics,2025-11-02T11:58:25Z
+IT000485,University of Messina,Ukraine,Italy,Male,27,B1,63.9,0.83,Medium,Married,0.31,0,0.1,Tutoring,0,Failed Exams,Business,2025-11-02T11:58:25Z
+IT000021,Politecnico di Torino,Brazil,Italy,Other,24,B2,72.0,0.8,High,Single,0.16,0,0.5,None,1,Completed,Logistics,2025-11-02T11:58:25Z
+LA000512,Daugavpils University,India,Latvia,Other,28,C1,69.1,0.89,Low,Other,0.66,0,0.6,None,1,Completed,Engineering,2025-11-02T11:58:25Z
+IT000273,Politecnico di Torino,Ukraine,Italy,Female,21,C1,62.8,1.0,Low,Single,0.22,0,0.1,Tutoring,1,Completed,Data Science,2025-11-02T11:58:25Z
+IT000243,University of Messina,Sri Lanka,Italy,Prefer not to say,26,B2,73.2,0.94,High,Single,0.39,0,0.6,None,1,Completed,Data Science,2025-11-02T11:58:25Z
+LA000078,TSI Riga,Slovakia,Latvia,Other,24,B1,77.8,0.98,Medium,Other,0.1,0,0.1,LanguageMentor,1,Completed,Engineering,2025-11-02T11:58:25Z
+LA000032,Daugavpils University,Brazil,Latvia,Other,23,A2,58.5,0.94,Medium,Married,0.45,0,0.5,LanguageMentor,0,Transferred,Psychology,2025-11-02T11:58:25Z
+IT000260,Politecnico di Torino,Spain,Italy,Other,23,C1,58.9,0.68,Medium,Single,0.13,0,0.1,LanguageMentor,0,Failed Exams,Economics,2025-11-02T11:58:25Z
+SL000137,Slovak Tech,Ukraine,Slovakia,Female,18,C2,86.5,0.91,High,Other,0.52,0,0.1,Tutoring,1,Completed,Data Science,2025-11-02T11:58:26Z
+IT000130,Politecnico di Torino,Nigeria,Italy,Male,21,C2,75.3,0.88,Medium,Other,0.31,0,0.7,LanguageMentor,1,Completed,Computer Science,2025-11-02T11:58:25Z
+LA000395,Daugavpils University,Bangladesh,Latvia,Prefer not to say,26,B1,66.0,0.7,High,Other,0.13,0,0.6,BuddyProgram,0,Transferred,Economics,2025-11-02T11:58:25Z
+IT000085,University of Messina,Slovakia,Italy,Female,28,C1,80.8,0.77,Medium,Single,0.02,1,0.1,Tutoring,0,Administrative Withdrawal,Computer Science,2025-11-02T11:58:25Z
+LA000569,TSI Riga,Vietnam,Latvia,Male,22,A2,76.2,0.91,Low,Single,0.32,0,0.6,LanguageMentor,1,Ongoing,Data Science,2025-11-02T11:58:25Z
+SL000160,Slovak Tech,Bangladesh,Slovakia,Male,20,B2,73.0,0.75,Low,Single,0.1,1,0.6,Tutoring,0,Left Country,Psychology,2025-11-02T11:58:26Z
+IT000383,Politecnico di Torino,Pakistan,Italy,Male,24,C1,89.4,0.81,Medium,Married,0.11,0,0.6,BuddyProgram,1,Ongoing,Logistics,2025-11-02T11:58:25Z
+IT000532,University of Messina,Brazil,Italy,Male,24,A2,77.5,0.86,Low,Single,0.01,0,0.5,None,0,Failed Exams,Logistics,2025-11-02T11:58:25Z
+IT000535,Politecnico di Torino,Italy,Italy,Other,21,B1,75.0,0.88,High,Other,0.11,0,0.1,BuddyProgram,0,Transferred,Business,2025-11-02T11:58:25Z
+SL000356,Slovak Tech,Slovakia,Slovakia,Male,25,B2,81.6,0.82,High,Married,0.16,0,0.1,Tutoring,1,Completed,Business,2025-11-02T11:58:26Z
+IT000196,University of Messina,Bangladesh,Italy,Female,21,A2,78.3,1.0,Medium,Married,0.19,0,0.6,None,1,Completed,Logistics,2025-11-02T11:58:25Z
+IT000224,Politecnico di Torino,Nigeria,Italy,Other,19,B2,66.4,0.98,Low,Other,0.56,0,0.7,Tutoring,1,Completed,Psychology,2025-11-02T11:58:25Z
+LA000010,Daugavpils University,Spain,Latvia,Prefer not to say,21,C1,72.0,0.83,Medium,Married,0.05,0,0.1,LanguageMentor,1,Completed,Economics,2025-11-02T11:58:25Z
+SL000294,Slovak Tech,Sri Lanka,Slovakia,Other,18,C2,70.2,0.77,Medium,Married,0.25,0,0.6,None,1,Completed,Engineering,2025-11-02T11:58:26Z
+SL000292,Slovak Tech,Bangladesh,Slovakia,Male,24,C1,90.0,0.94,Medium,Single,0.29,0,0.6,Counseling,1,Completed,Logistics,2025-11-02T11:58:26Z
+LA000060,TSI Riga,Nigeria,Latvia,Other,26,C2,61.4,1.0,Low,Married,0.27,0,0.7,None,0,Failed Exams,Business,2025-11-02T11:58:25Z
+IT000047,Politecnico di Torino,Italy,Italy,Prefer not to say,24,C1,64.8,1.0,Medium,Other,0.42,0,0.1,None,1,Completed,Engineering,2025-11-02T11:58:25Z
+SL000168,Comenius University Bratislava,Vietnam,Slovakia,Male,26,C1,75.7,1.0,Low,Single,0.05,0,0.6,Tutoring,1,Completed,Data Science,2025-11-02T11:58:26Z
+IT000259,University of Messina,Italy,Italy,Other,23,B1,76.2,0.82,Low,Married,0.76,0,0.1,Tutoring,1,Completed,Data Science,2025-11-02T11:58:25Z
+SL000027,Comenius University Bratislava,Vietnam,Slovakia,Prefer not to say,26,B2,72.9,0.74,Low,Single,0.33,0,0.6,None,1,Completed,Business,2025-11-02T11:58:25Z
+IT000461,University of Messina,Sri Lanka,Italy,Female,21,C2,84.4,1.0,Medium,Married,0.37,0,0.6,None,1,Completed,Economics,2025-11-02T11:58:25Z
+LA000585,Daugavpils University,India,Latvia,Female,23,B1,84.8,0.86,High,Single,0.22,1,0.6,BuddyProgram,0,Dropped Out,Business,2025-11-02T11:58:25Z
+IT000515,University of Messina,Vietnam,Italy,Female,25,C2,63.7,0.79,Medium,Other,0.22,0,0.6,Counseling,1,Completed,Psychology,2025-11-02T11:58:25Z
+SL000439,Slovak Tech,Nigeria,Slovakia,Other,20,A2,70.4,0.85,High,Married,0.24,0,0.7,LanguageMentor,1,Ongoing,Computer Science,2025-11-02T11:58:26Z
+IT000327,Politecnico di Torino,India,Italy,Female,26,C2,65.4,0.78,Low,Married,0.31,1,0.6,Tutoring,0,Dropped Out,Psychology,2025-11-02T11:58:25Z
+LA000352,Daugavpils University,Latvia,Latvia,Prefer not to say,20,C1,91.8,0.83,Low,Other,0.26,0,0.1,BuddyProgram,1,Completed,Computer Science,2025-11-02T11:58:25Z
+SL000238,Slovak Tech,Slovakia,Slovakia,Prefer not to say,20,C2,81.5,0.87,Low,Married,0.3,1,0.1,Tutoring,0,Dropped Out,Business,2025-11-02T11:58:26Z
+SL000237,Slovak Tech,Slovakia,Slovakia,Male,21,C2,92.6,0.76,High,Other,0.05,0,0.1,Tutoring,1,Completed,Engineering,2025-11-02T11:58:26Z
+LA000260,TSI Riga,Bangladesh,Latvia,Other,20,C1,68.7,0.81,Medium,Single,0.26,0,0.6,BuddyProgram,1,Completed,Logistics,2025-11-02T11:58:25Z
+SL000221,Comenius University Bratislava,USA,Slovakia,Prefer not to say,22,B1,67.2,0.98,Medium,Other,0.34,0,0.3,BuddyProgram,1,Completed,Economics,2025-11-02T11:58:26Z
+IT000206,Politecnico di Torino,India,Italy,Male,22,C1,70.0,0.84,Low,Single,0.27,0,0.6,Tutoring,1,Completed,Psychology,2025-11-02T11:58:25Z
+IT000232,Politecnico di Torino,Ukraine,Italy,Male,29,B2,81.4,0.96,High,Other,0.44,0,0.1,None,1,Completed,Engineering,2025-11-02T11:58:25Z
+IT000355,University of Messina,Brazil,Italy,Prefer not to say,24,C1,74.1,0.94,Medium,Other,0.13,1,0.5,None,0,Left Country,Data Science,2025-11-02T11:58:25Z
+IT000201,Politecnico di Torino,Latvia,Italy,Other,18,C2,77.8,0.87,Low,Other,0.19,0,0.1,Tutoring,1,Completed,Economics,2025-11-02T11:58:25Z
+SL000300,Slovak Tech,Nigeria,Slovakia,Other,21,C2,70.9,0.97,High,Single,0.23,0,0.7,LanguageMentor,1,Completed,Engineering,2025-11-02T11:58:26Z
+LA000033,TSI Riga,Sri Lanka,Latvia,Male,27,B1,70.4,0.89,Medium,Married,0.51,0,0.6,None,1,Completed,Engineering,2025-11-02T11:58:25Z
+LA000221,Daugavpils University,Spain,Latvia,Other,25,B1,76.7,0.93,Medium,Married,0.48,0,0.1,Counseling,1,Completed,Economics,2025-11-02T11:58:25Z
+SL000470,Comenius University Bratislava,Brazil,Slovakia,Female,23,B2,72.3,0.85,Medium,Married,0.51,1,0.5,None,0,Left Country,English Philology,2025-11-02T11:58:26Z
+LA000147,Daugavpils University,Brazil,Latvia,Male,23,B2,55.8,0.94,Medium,Married,0.22,0,0.5,None,1,Completed,Economics,2025-11-02T11:58:25Z
+LA000103,Daugavpils University,Sri Lanka,Latvia,Female,28,C2,78.9,0.94,High,Married,0.36,0,0.6,LanguageMentor,1,Completed,Psychology,2025-11-02T11:58:25Z
+SL000036,Slovak Tech,Italy,Slovakia,Male,22,C1,77.6,0.86,Medium,Married,0.18,1,0.1,LanguageMentor,0,Dropped Out,Economics,2025-11-02T11:58:25Z
+LA000323,TSI Riga,Spain,Latvia,Female,26,A2,69.7,0.94,Low,Other,0.35,0,0.1,LanguageMentor,1,Completed,Computer Science,2025-11-02T11:58:25Z
+LA000467,TSI Riga,USA,Latvia,Prefer not to say,24,B2,72.2,0.92,Medium,Single,0.21,1,0.3,LanguageMentor,0,Dropped Out,Engineering,2025-11-02T11:58:25Z
+LA000045,Daugavpils University,Brazil,Latvia,Female,22,B1,72.2,0.82,Low,Other,0.24,0,0.5,None,1,Completed,Engineering,2025-11-02T11:58:25Z
+IT000440,University of Messina,Vietnam,Italy,Female,28,B2,82.5,0.98,Low,Married,0.12,0,0.6,Tutoring,1,Completed,Data Science,2025-11-02T11:58:25Z
+LA000051,TSI Riga,Italy,Latvia,Male,26,A2,68.1,0.96,Low,Married,0.19,0,0.1,None,1,Ongoing,Engineering,2025-11-02T11:58:25Z
+IT000413,Politecnico di Torino,Pakistan,Italy,Male,24,A2,75.8,0.82,High,Single,0.39,1,0.6,None,0,Left Country,English Philology,2025-11-02T11:58:25Z
+LA000562,TSI Riga,Spain,Latvia,Female,21,B1,91.4,0.77,Low,Married,0.11,0,0.1,None,0,Failed Exams,Computer Science,2025-11-02T11:58:25Z
+LA000524,TSI Riga,Latvia,Latvia,Other,22,A2,67.1,0.77,Medium,Married,0.36,0,0.1,BuddyProgram,0,Failed Exams,Engineering,2025-11-02T11:58:25Z
+SL000464,Comenius University Bratislava,Spain,Slovakia,Prefer not to say,27,C1,74.5,0.76,High,Other,0.14,0,0.1,None,1,Completed,Computer Science,2025-11-02T11:58:26Z
+SL000189,Comenius University Bratislava,Nigeria,Slovakia,Other,22,B2,77.9,0.9,High,Married,0.16,0,0.7,BuddyProgram,1,Ongoing,Psychology,2025-11-02T11:58:26Z
+SL000182,Comenius University Bratislava,Nigeria,Slovakia,Prefer not to say,21,C1,82.1,0.86,Low,Other,0.46,0,0.7,None,1,Completed,Business,2025-11-02T11:58:26Z
+LA000123,Daugavpils University,USA,Latvia,Other,22,B2,69.6,0.99,Low,Single,0.21,0,0.3,BuddyProgram,0,Failed Exams,Economics,2025-11-02T11:58:25Z
+IT000116,Politecnico di Torino,Brazil,Italy,Other,25,B2,83.5,0.87,Medium,Other,0.17,0,0.5,Counseling,1,Completed,Economics,2025-11-02T11:58:25Z
+SL000115,Slovak Tech,Vietnam,Slovakia,Other,24,C1,77.2,0.83,High,Single,0.56,1,0.6,Tutoring,0,Dropped Out,Economics,2025-11-02T11:58:26Z
+SL000262,Slovak Tech,Slovakia,Slovakia,Female,20,B1,71.4,0.95,High,Other,0.48,0,0.1,None,1,Ongoing,Engineering,2025-11-02T11:58:26Z
+LA000336,TSI Riga,Nigeria,Latvia,Male,28,C1,71.5,0.93,Medium,Single,0.31,0,0.7,BuddyProgram,1,Completed,English Philology,2025-11-02T11:58:25Z
+IT000217,University of Messina,Brazil,Italy,Female,20,B2,56.4,0.86,High,Single,0.19,0,0.5,BuddyProgram,1,Completed,Psychology,2025-11-02T11:58:25Z
+LA000068,Daugavpils University,Brazil,Latvia,Male,30,C2,71.7,0.74,High,Single,0.49,0,0.5,None,1,Completed,Engineering,2025-11-02T11:58:25Z
+SL000496,Slovak Tech,Italy,Slovakia,Female,23,B2,76.4,1.0,Medium,Single,0.31,0,0.1,None,1,Completed,Logistics,2025-11-02T11:58:26Z
+SL000321,Comenius University Bratislava,Pakistan,Slovakia,Other,21,A2,77.4,0.7,Low,Married,0.2,0,0.6,LanguageMentor,0,Failed Exams,Business,2025-11-02T11:58:26Z
+LA000444,Daugavpils University,Spain,Latvia,Male,26,B1,73.4,0.99,Low,Other,0.3,0,0.1,Tutoring,1,Completed,Computer Science,2025-11-02T11:58:25Z
+IT000222,Politecnico di Torino,Italy,Italy,Prefer not to say,23,B1,73.9,0.79,Medium,Married,0.17,1,0.1,None,0,Administrative Withdrawal,Psychology,2025-11-02T11:58:25Z
+LA000186,Daugavpils University,Nigeria,Latvia,Female,26,B1,66.8,0.75,High,Single,0.32,1,0.7,Tutoring,0,Left Country,Logistics,2025-11-02T11:58:25Z
+SL000434,Comenius University Bratislava,Vietnam,Slovakia,Male,18,B2,76.9,0.9,High,Other,0.19,1,0.6,None,0,Dropped Out,Computer Science,2025-11-02T11:58:26Z
+SL000368,Comenius University Bratislava,Brazil,Slovakia,Female,27,C1,67.5,0.92,High,Married,0.16,0,0.5,LanguageMentor,1,Completed,Data Science,2025-11-02T11:58:26Z
+SL000433,Comenius University Bratislava,Slovakia,Slovakia,Female,27,B1,77.7,0.72,High,Married,0.41,0,0.1,None,0,Failed Exams,Computer Science,2025-11-02T11:58:26Z
+LA000446,Daugavpils University,USA,Latvia,Prefer not to say,21,C2,80.9,1.0,Low,Married,0.46,0,0.3,None,1,Completed,Economics,2025-11-02T11:58:25Z
