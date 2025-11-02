@@ -1,44 +1,171 @@
 {
-  "timestamp": "2025-11-02T14:57:56.303607",
+  "timestamp": "2025-11-02T16:37:13.138606",
   "sequence_length_weeks": 32,
   "models": {
     "lstm": {
-      "auc": 0.5176949577200125,
+      "auc": 0.5136235515189478,
       "f1": 0.7686567164179104,
-      "accuracy": 0.6242424242424243
+      "accuracy": 0.6242424242424243,
+      "brier_score": 0.23534827871201622,
+      "ece": 0.02874967329429861
     },
     "rf": {
-      "auc": 0.6744440964610084,
-      "f1": 0.751131221719457,
-      "accuracy": 0.6666666666666666
+      "auc": 0.8927341058565612,
+      "f1": 0.9035087719298246,
+      "accuracy": 0.8666666666666667,
+      "brier_score": 0.11561839988400868,
+      "ece": 0.11618907159686727
     },
     "hybrid_lstm_rf": {
-      "auc": 0.6821171312245536,
-      "f1": 0.7727272727272727,
-      "accuracy": 0.6363636363636364,
-      "method": "stacking",
-      "blend_alpha": null
+      "auc": 0.891324772940808,
+      "f1": 0.7686567164179104,
+      "accuracy": 0.6242424242424243,
+      "method": "blending",
+      "blend_alpha": 0.9,
+      "brier_score": 0.21748798691881388,
+      "ece": 0.29062285403935606
     }
   },
   "confusion_matrix": {
-    "tn": 3,
-    "fp": 59,
-    "fn": 1,
-    "tp": 102
+    "tn": 0,
+    "fp": 62,
+    "fn": 0,
+    "tp": 103
   },
-  "feature_importance_hint": [
-    "attendance_rate",
-    "gpa_prev",
-    "teaching_style_difference",
-    "age",
-    "country_home_encoded",
-    "cultural_distance",
-    "language_proficiency_B1",
-    "language_proficiency_A2",
-    "w15",
-    "w25",
-    "w6"
+  "threshold_analysis": {
+    "optimal_f1_threshold": 0.6000000000000002,
+    "balanced_threshold": 0.6500000000000001,
+    "optimal_f1_score": 0.8695652173913043,
+    "intervention_rate": 0.36969696969696975
+  },
+  "calibration": {
+    "brier": 0.21748798691881388,
+    "ece": 0.29062285403935606
+  },
+  "by_institution": [
+    {
+      "Institution": "TSI Riga",
+      "N": 30,
+      "AUC": 0.7655502392344498,
+      "F1": 0.7755102040816326,
+      "Accuracy": 0.6333333333333333,
+      "TPR": 1.0,
+      "FPR": 1.0,
+      "Success_Rate": 0.6333333333333333
+    },
+    {
+      "Institution": "Daugavpils University",
+      "N": 29,
+      "AUC": 0.8789473684210526,
+      "F1": 0.7916666666666666,
+      "Accuracy": 0.6551724137931034,
+      "TPR": 1.0,
+      "FPR": 1.0,
+      "Success_Rate": 0.6551724137931034
+    },
+    {
+      "Institution": "University of Messina",
+      "N": 27,
+      "AUC": 0.8764705882352941,
+      "F1": 0.7727272727272727,
+      "Accuracy": 0.6296296296296297,
+      "TPR": 1.0,
+      "FPR": 1.0,
+      "Success_Rate": 0.6296296296296297
+    },
+    {
+      "Institution": "Comenius University Bratislava",
+      "N": 25,
+      "AUC": 1.0,
+      "F1": 0.7804878048780488,
+      "Accuracy": 0.64,
+      "TPR": 1.0,
+      "FPR": 1.0,
+      "Success_Rate": 0.64
+    },
+    {
+      "Institution": "Slovak Tech",
+      "N": 26,
+      "AUC": 0.915151515151515,
+      "F1": 0.7317073170731707,
+      "Accuracy": 0.5769230769230769,
+      "TPR": 1.0,
+      "FPR": 1.0,
+      "Success_Rate": 0.5769230769230769
+    },
+    {
+      "Institution": "Politecnico di Torino",
+      "N": 28,
+      "AUC": 0.8983957219251337,
+      "F1": 0.7555555555555555,
+      "Accuracy": 0.6071428571428571,
+      "TPR": 1.0,
+      "FPR": 1.0,
+      "Success_Rate": 0.6071428571428571
+    }
   ],
+  "by_language": [
+    {
+      "Language": "B1",
+      "N": 33,
+      "Success_Rate": 0.48484848484848486,
+      "Predicted_Success": 0.5847029642724029,
+      "AUC": 0.9154411764705881,
+      "F1": 0.6530612244897959,
+      "TPR": 1.0,
+      "FPR": 1.0
+    },
+    {
+      "Language": "A2",
+      "N": 32,
+      "Success_Rate": 0.5,
+      "Predicted_Success": 0.5868778329639599,
+      "AUC": 0.9140625,
+      "F1": 0.6666666666666666,
+      "TPR": 1.0,
+      "FPR": 1.0
+    },
+    {
+      "Language": "C2",
+      "N": 28,
+      "Success_Rate": 0.6785714285714286,
+      "Predicted_Success": 0.5994642859117448,
+      "AUC": 0.8947368421052633,
+      "F1": 0.8085106382978723,
+      "TPR": 1.0,
+      "FPR": 1.0
+    },
+    {
+      "Language": "C1",
+      "N": 35,
+      "Success_Rate": 0.6857142857142857,
+      "Predicted_Success": 0.5974573752829839,
+      "AUC": 0.8106060606060606,
+      "F1": 0.8135593220338984,
+      "TPR": 1.0,
+      "FPR": 1.0
+    },
+    {
+      "Language": "B2",
+      "N": 37,
+      "Success_Rate": 0.7567567567567568,
+      "Predicted_Success": 0.6020809395654614,
+      "AUC": 0.7817460317460317,
+      "F1": 0.8615384615384616,
+      "TPR": 1.0,
+      "FPR": 1.0
+    }
+  ],
+  "generalizability": {
+    "auc_variance": 0.005718204410118713,
+    "auc_cv": 0.08505230982617193
+  },
+  "fairness_gaps": {
+    "language_tpr_gap": 0.0,
+    "language_fpr_gap": 0.0,
+    "language_auc_gap": 0.13369514472455635
+  },
+  "early_warning": [],
   "critical_weeks": [
     15,
     25,
@@ -46,157 +173,21 @@
     23,
     22
   ],
-  "notes": "Hybrid stacking model achieves 0.682 AUC. Critical weeks [15, 25, 6] show highest predictive power.",
-  "calibration": {
-    "brier": 0.21849266891991173,
-    "ece_10bins": 0.07874866037657766
+  "feature_importance_hint": [
+    "dropout",
+    "attendance_rate",
+    "gpa_prev",
+    "teaching_style_difference",
+    "age",
+    "country_home_encoded",
+    "cultural_distance",
+    "language_proficiency_B1"
+  ],
+  "dataset_info": {
+    "train_samples": 1320,
+    "val_samples": 165,
+    "test_samples": 165,
+    "positive_class_ratio": 0.6204545454545455
   },
-  "by_institution": {
-    "auc": {
-      "Comenius University Bratislava": 0.8055555555555556,
-      "Politecnico di Torino": 0.7754010695187166,
-      "Daugavpils University": 0.7473684210526315,
-      "University of Messina": 0.7235294117647058,
-      "Slovak Tech": 0.5090909090909091,
-      "TSI Riga": 0.46411483253588515
-    },
-    "f1": {
-      "Comenius University Bratislava": 0.8205128205128205,
-      "Politecnico di Torino": 0.7727272727272727,
-      "Daugavpils University": 0.7659574468085106,
-      "University of Messina": 0.7727272727272727,
-      "Slovak Tech": 0.7317073170731707,
-      "TSI Riga": 0.7755102040816326
-    },
-    "tpr": {
-      "Comenius University Bratislava": 1.0,
-      "Politecnico di Torino": 1.0,
-      "Daugavpils University": 0.9473684210526315,
-      "University of Messina": 1.0,
-      "Slovak Tech": 1.0,
-      "TSI Riga": 1.0
-    },
-    "fpr": {
-      "Comenius University Bratislava": 0.7777777777777778,
-      "Politecnico di Torino": 0.9090909090909091,
-      "Daugavpils University": 1.0,
-      "University of Messina": 1.0,
-      "Slovak Tech": 1.0,
-      "TSI Riga": 1.0
-    },
-    "n": {
-      "Comenius University Bratislava": 25.0,
-      "Politecnico di Torino": 28.0,
-      "Daugavpils University": 29.0,
-      "University of Messina": 27.0,
-      "Slovak Tech": 26.0,
-      "TSI Riga": 30.0
-    }
-  },
-  "by_language": {
-    "auc": {
-      "C2": 0.8011695906432749,
-      "B1": 0.7205882352941176,
-      "A2": 0.66796875,
-      "C1": 0.5909090909090909,
-      "B2": 0.3492063492063492
-    },
-    "f1": {
-      "C2": 0.8085106382978723,
-      "B1": 0.6530612244897959,
-      "A2": 0.6818181818181818,
-      "C1": 0.8135593220338984,
-      "B2": 0.8615384615384616
-    },
-    "tpr": {
-      "C2": 1.0,
-      "B1": 1.0,
-      "A2": 0.9375,
-      "C1": 1.0,
-      "B2": 1.0
-    },
-    "fpr": {
-      "C2": 1.0,
-      "B1": 1.0,
-      "A2": 0.8125,
-      "C1": 1.0,
-      "B2": 1.0
-    },
-    "n": {
-      "C2": 28.0,
-      "B1": 33.0,
-      "A2": 32.0,
-      "C1": 35.0,
-      "B2": 37.0
-    }
-  },
-  "by_gender": {
-    "auc": {
-      "Male": 0.7386666666666667,
-      "Female": 0.7,
-      "Other": 0.6743589743589744,
-      "Prefer not to say": 0.5555555555555556
-    },
-    "f1": {
-      "Male": 0.7936507936507936,
-      "Female": 0.7317073170731707,
-      "Other": 0.7761194029850746,
-      "Prefer not to say": 0.8076923076923077
-    },
-    "tpr": {
-      "Male": 1.0,
-      "Female": 1.0,
-      "Other": 1.0,
-      "Prefer not to say": 0.9545454545454546
-    },
-    "fpr": {
-      "Male": 0.8666666666666667,
-      "Female": 0.9565217391304348,
-      "Other": 1.0,
-      "Prefer not to say": 1.0
-    },
-    "n": {
-      "Male": 40.0,
-      "Female": 53.0,
-      "Other": 41.0,
-      "Prefer not to say": 31.0
-    }
-  },
-  "by_subject": {
-    "Business": 0.438,
-    "Computer Science": 0.667,
-    "Data Science": 0.684,
-    "Economics": 0.621,
-    "Engineering": 0.742,
-    "English Philology": 0.533,
-    "Logistics": 0.706,
-    "Psychology": 0.471
-  },
-  "by_country_home": {
-    "Bangladesh": 0.583,
-    "Brazil": 0.471,
-    "India": 0.667,
-    "Italy": 0.5,
-    "Latvia": 0.5,
-    "Nigeria": 0.706,
-    "Pakistan": 0.778,
-    "Slovakia": 0.455,
-    "Spain": 0.692,
-    "Sri Lanka": 0.909,
-    "USA": 0.667,
-    "Ukraine": 0.733,
-    "Vietnam": 0.533
-  },
-  "thresholds": {
-    "best_f1": 0.5499999999999999,
-    "best_j": 0.7
-  },
-  "ks": {
-    "ks": 0.331506420294394,
-    "threshold": 0.6614909172058105
-  },
-  "top_k_capture": {
-    "top10": 0.10679611650485436,
-    "top20": 0.23300970873786409
-  }
+  "notes": "Comprehensive analysis including cultural distance, teaching style mismatch, support programs, and fairness metrics."
 }
