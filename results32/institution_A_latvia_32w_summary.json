@@ -1,0 +1,21 @@
+{
+  "dataset": "institution_A_latvia_32w",
+  "n_records": 600,
+  "alpha": 0.9,
+  "threshold": 0.6000000000000002,
+  "has_labels": true,
+  "metrics_if_labeled": {
+    "auc": 0.9906758230563645,
+    "f1": 0.9725490196078431,
+    "accuracy": 0.965
+  },
+  "plots_saved": [
+    "institution_A_latvia_32w_pred_prob_hist.png",
+    "institution_A_latvia_32w_pred_class_pie.png",
+    "institution_A_latvia_32w_subject_mean_pred.png",
+    "institution_A_latvia_32w_language_mean_pred.png",
+    "institution_A_latvia_32w_gender_mean_pred.png",
+    "institution_A_latvia_32w_roc.png",
+    "institution_A_latvia_32w_confusion_matrix.png"
+  ]
+}
